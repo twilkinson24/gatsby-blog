@@ -11,11 +11,7 @@ const PostCard = props => {
 
   return (
     <div
-      className={`column post-card ${
-        index === 0 || index === 4
-          ? "is-full"
-          : "is-one-third-desktop is-full-mobile"
-      }`}
+      className={`column post-card is-one-third-desktop is-full-mobile`}
     >
       <BackgroundImage src={imageSrc} index={index}>
         <Link to={`/${props.slug}`} />

@@ -75,6 +75,12 @@ class Navbar extends Component {
                         {page.node.title}
                       </Link>
                     ))}
+                    <Link
+                      className="navbar-item"
+                      to={`/contact`}
+                    >
+                      Contact
+                    </Link>
                   </div>
                 </div>
               </div>

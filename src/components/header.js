@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link, graphql, StaticQuery } from "gatsby";
-import logo from "../images/logo.svg";
+// import logo from "../images/logo.svg";
 
 class Header extends Component {
   componentDidMount() {
@@ -46,9 +46,9 @@ class Header extends Component {
           const wordpressPages = data.allWordpressPage.edges;
           const wordpressMetadata = data.wordpressWpSettings;
           return (
-            <section className="hero is-primary is-medium">
+            <section className="hero is-medium">
               <div className="hero-head">
-                <nav className="navbar is-primary">
+                <nav className="navbar">
                   <div className="container">
                     <div className="navbar-brand">
                       <Link
@@ -56,11 +56,7 @@ class Header extends Component {
                         className="navbar-item"
                         title="Gatsby Starter WordPress Community"
                       >
-                        <img
-                          src={logo}
-                          alt="Gatsby Starter WordPress Community"
-                          style={{ width: "88px" }}
-                        />
+                        <h1>Taylor Wilkinson</h1>
                       </Link>
                       <div
                         className="navbar-burger burger"
@@ -82,6 +78,12 @@ class Header extends Component {
                             {page.node.title}
                           </Link>
                         ))}
+                        <Link
+                            className="navbar-item"
+                            to={`/contact`}
+                          >
+                            Contact
+                          </Link>
                       </div>
                     </div>
                   </div>
