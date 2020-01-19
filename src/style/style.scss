@@ -105,10 +105,9 @@ footer.footer {
 }
 
 .site-title {
-  color: #25274D;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-style: italic;
-  font-size: 2rem;
+  color: #363636;
+  font-family: 'Parisienne', 'Times New Roman', Times, serif;
+  font-size: 3rem;
 }
 
 h2.site-title {
@@ -116,7 +115,7 @@ h2.site-title {
 }
 
 .text-orange {
-  color: rgb(255, 51, 0);
+  color: #ff3300;
 }
 
 /* nav */
@@ -130,12 +129,12 @@ h2.site-title {
 }
 
 .action-buttons button.button {
-  background-color: rgb(37, 99, 255);
+  background-color: #2563ff;
   color: #fff;
 }
 
 .text-blue {
-  color: rgb(37, 99, 255);
+  color: #2563ff;
 }
 
 /* nav animation */
@@ -144,7 +143,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 }
 .navbar-item:before, .navbar-item:after {
   content: '';
-  border-bottom: solid 1px rgb(37, 99, 255);
+  border-bottom: solid 1px #ff3300;
   position: absolute;
   bottom: 0;
   width: 0;
@@ -160,5 +159,11 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 .navbar-item:before, .navbar-item:after {
   -webkit-transition: all 0.2s ease;
           transition: all 0.2s ease;
+}
+
+.navbar-brand {
+  .navbar-item:before, .navbar-item:after {
+    border-bottom: none;
+  }
 }
 

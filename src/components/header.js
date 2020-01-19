@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link, graphql, StaticQuery } from "gatsby";
-import logo from "../images/logo.svg";
 import avatar from "../images/avatar-tw.jpg"
+import compIcon from "../images/sm-comp.png"
 
 class Header extends Component {
   componentDidMount() {
@@ -57,11 +57,8 @@ class Header extends Component {
                         className="navbar-item"
                         title="Gatsby Starter WordPress Community"
                       >   
-                        <img
-                          src={logo}
-                          alt="Gatsby Starter WordPress Community"
-                          style={{ width: "88px" }}
-                        />
+                        <img src={compIcon} alt="cartoon computer with code" style={{ maxHeight: '40px', marginRight: '1rem'}} />
+                        <h1 className="site-title">T<span style={{color: '#4a4a4a'}}>W</span></h1>
                       </Link>
                       <div
                         className="navbar-burger burger"
@@ -121,9 +118,6 @@ class Header extends Component {
                         </li>
                         <li>
                           <h3>Custom Web Solutions</h3>
-                        </li>
-                        <li>
-                          <h3>Website edits &amp; updates</h3>
                         </li>
                       </ul>
                       <div className="action-buttons">

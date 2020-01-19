@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link, graphql, StaticQuery } from "gatsby";
-import logo from "../images/logo.svg";
+import compIcon from "../images/sm-comp.png"
 
 class Navbar extends Component {
   componentDidMount() {
@@ -52,11 +52,8 @@ class Navbar extends Component {
                     className="navbar-item"
                     title="Gatsby Starter WordPress Community"
                   >
-                    <img
-                      src={logo}
-                      alt="Gatsby Starter WordPress Community"
-                      style={{ width: "88px" }}
-                    />
+                    <img src={compIcon} alt="cartoon computer with code" style={{ maxHeight: '40px', marginRight: '1rem'}} />
+                    <h1 className="site-title">Taylor <span style={{color: '#4a4a4a'}}>Wilkinson</span></h1>
                   </Link>
                   <div className="navbar-burger burger" data-target="navMenu">
                     <span />
