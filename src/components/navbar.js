@@ -41,7 +41,7 @@ class Navbar extends Component {
           const wordpressPages = data.allWordpressPage.edges;
           return (
             <nav
-              className="navbar is-primary"
+              className="navbar not-homepage"
               role="navigation"
               aria-label="main-navigation"
             >
@@ -66,6 +66,12 @@ class Navbar extends Component {
                 </div>
                 <div id="navMenu" className="navbar-menu">
                   <div className="navbar-end has-text-centered">
+                    <Link
+                        className="navbar-item"
+                        to={`/`}
+                    >
+                      Services
+                    </Link>
                     {wordpressPages.map(page => (
                       <Link
                         className="navbar-item"
@@ -75,6 +81,12 @@ class Navbar extends Component {
                         {page.node.title}
                       </Link>
                     ))}
+                    <Link
+                      className="navbar-item"
+                      to={`/contact`}
+                    >
+                      Blog
+                    </Link>
                     <Link
                       className="navbar-item"
                       to={`/contact`}

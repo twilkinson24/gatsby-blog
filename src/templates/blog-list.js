@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
 
-import Layout from "../components/layout";
+import FrontPageLayout from "../components/front-page-layout";
 import SEO from "../components/seo";
 import PostCard from "../components/post-card";
 
@@ -48,7 +48,7 @@ const BlogIndex = props => {
   const pagesWithDots = pagination(currentPage, numPages);
 
   return (
-    <Layout>
+    <FrontPageLayout>
       <SEO title={siteTitle} keywords={[`gatsby`, `blog`, `wordpress`]} />
       <div className="columns is-multiline is-mobile blog-list">
         {posts.map((post, index) => (
@@ -89,7 +89,7 @@ const BlogIndex = props => {
           </ul>
         </nav>
       </section>
-    </Layout>
+    </FrontPageLayout>
   );
 };
 

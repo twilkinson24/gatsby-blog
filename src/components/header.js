@@ -74,12 +74,12 @@ class Header extends Component {
                     </div>
                     <div id="navMenu" className="navbar-menu">
                       <div className="navbar-end has-text-centered">
-                      <Link
-                            className="navbar-item"
-                            to={`/`}
-                          >
-                            Services
-                          </Link>
+                        <Link
+                          className="navbar-item"
+                          to={`/`}
+                        >
+                          Services
+                        </Link>
                         {wordpressPages.map(page => (
                           <Link
                             className="navbar-item"
@@ -93,8 +93,14 @@ class Header extends Component {
                             className="navbar-item"
                             to={`/contact`}
                           >
-                            Contact
-                          </Link>
+                          Blog
+                        </Link>
+                        <Link
+                            className="navbar-item"
+                            to={`/contact`}
+                          >
+                          Contact
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -105,10 +111,24 @@ class Header extends Component {
                   <section className="section columns">
                     <div className="column">
                       <h1 className="title"><span className="text-orange">Hey!</span>I'm Taylor</h1>
-                      <h2 className="subtitle">and I love web development</h2>
+                      <h2 className="subtitle"><span className="text-blue">and I love web development</span></h2>
+                      <ul>
+                        <li>
+                          <h3>Front-end Development</h3>
+                        </li>
+                        <li>
+                          <h3>WordPress Development</h3>
+                        </li>
+                        <li>
+                          <h3>Custom Web Solutions</h3>
+                        </li>
+                        <li>
+                          <h3>Website edits &amp; updates</h3>
+                        </li>
+                      </ul>
                       <div className="action-buttons">
                         <button className="button">Projects</button>
-                        <button className="button">Contact Me</button>
+                        <button className="button">Contact</button>
                       </div>
                     </div>
                     <div className="column">
@@ -119,7 +139,7 @@ class Header extends Component {
                     <img
                       src={avatar}
                       className="img-rounded"
-                      alt="Gatsby Starter WordPress Community"
+                      alt="Taylor Wilkinson - freelance web developer"
                       style={{ width: "200px" }}
                     />
                   </Link>

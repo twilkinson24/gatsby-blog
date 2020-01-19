@@ -8,9 +8,9 @@ import "../style/style.scss";
 const SimpleLayout = ({ children }) => (
   <>
     <Navbar />
-    <section className="section">
-      <main className="container">{children}</main>
-    </section>
+      <section className="section">
+        <main className="container">{children}</main>
+      </section>
     <Footer />
   </>
 );
