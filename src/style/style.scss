@@ -87,7 +87,33 @@ footer.footer {
 }
 
 /* Taylor's edits */
-.hero {
-  background-color: #fff;
+.hero,
+.hero.is-medium {
+  background-image: linear-gradient(#fff, rgba(255, 255, 255, .8)),
+  url(../images/illustration-of-web-design-template-vector.jpg);
+  background-color: rgba(255, 255, 255, .9);
   border-bottom: 1px solid #ccc;
+  .hero-body {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+.img-rounded {
+  border-radius: 100%;
+}
+
+.site-title {
+  color: #25274D;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-size: 2rem;
+}
+
+h2.site-title {
+  font-size: 1rem;
+}
+
+.text-orange {
+  color: rgb(255, 51, 0);
 }
