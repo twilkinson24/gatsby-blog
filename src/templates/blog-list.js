@@ -12,40 +12,12 @@ import PostCard from "../components/post-card";
  * @param {Number} last
  * @returns {Array}
  */
-const pagination = (current, last) => {
-  const delta = 2;
-  const left = current - delta;
-  const right = current + delta + 1;
 
-  let range = [];
-  let rangeWithDots = [];
-  let l;
-
-  for (let i = 1; i <= last; i++) {
-    if (i === 1 || i === last || (i >= left && i < right)) {
-      range.push(i);
-    }
-  }
-  for (let j of range) {
-    if (l) {
-      if (j - l !== 1) {
-        rangeWithDots.push("...");
-      }
-    }
-    rangeWithDots.push(j);
-    l = j;
-  }
-
-  return rangeWithDots;
-};
 
 const BlogIndex = props => {
   const { data } = props;
   const siteTitle = data.site.siteMetadata.title;
   const posts = data.allWordpressPost.edges;
-  const { currentPage, numPages } = props.pageContext;
-
-  const pagesWithDots = pagination(currentPage, numPages);
 
   return (
     <FrontPageLayout>
@@ -62,33 +34,7 @@ const BlogIndex = props => {
           />
         ))}
       </div>
-      <section className="section">
-        <nav
-          className="pagination is-centered"
-          role="navigation"
-          aria-label="pagination"
-        >
-          <ul className="pagination-list">
-            {pagesWithDots.map(index => (
-              <li key={index}>
-                {index === "..." ? (
-                  <span className="pagination-ellipsis">&hellip;</span>
-                ) : (
-                  <Link
-                    className={`pagination-link ${
-                      currentPage === index ? `is-current` : ""
-                    }`}
-                    to={`/${index === 1 ? "" : index}`}
-                    aria-label={`Goto page ${index}`}
-                  >
-                    {index}
-                  </Link>
-                )}
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </section>
+    
     </FrontPageLayout>
   );
 };

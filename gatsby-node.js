@@ -5,6 +5,7 @@ exports.createPages = ({ graphql, actions }) => {
 
   const blogPage = path.resolve(`./src/templates/blog-page.js`);
   const blogList = path.resolve(`./src/templates/blog-list.js`);
+  const blogListBlog = path.resolve(`./src/templates/blog-list-blog.js`);
   const blogPost = path.resolve(`./src/templates/blog-post.js`);
 
   return graphql(`
@@ -53,13 +54,28 @@ exports.createPages = ({ graphql, actions }) => {
       });
     });
 
+     
+
     const postsPerPage = 5;
     const numPages = Math.ceil(posts.length / postsPerPage);
 
     Array.from({ length: numPages }).forEach((_, i) => {
       createPage({
-        path: i === 0 ? `/` : `/${i + 1}`,
+        path: `/`,
         component: blogList,
+        context: {
+          limit: 3,
+          skip: i * postsPerPage,
+          numPages,
+          currentPage: i + 1
+        }
+      });
+    });
+
+    Array.from({ length: numPages }).forEach((_, i) => {
+      createPage({
+        path: i === 0 ? `/blog` : `/${i + 1}`,
+        component: blogListBlog,
         context: {
           limit: postsPerPage,
           skip: i * postsPerPage,

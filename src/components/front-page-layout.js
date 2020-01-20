@@ -15,6 +15,14 @@ const FrontPageLayout = ({ children }) => (
         <section className="section">
           <h2>Services</h2>
           <p>I guess I would have some services here.</p>
+          <ul>
+            <li>Custom Theme Development</li>
+            <li>Genesis Theme Development</li>
+            <li>Headless WordPress With Gatsby.js</li>
+            <li>PSD to WordPress</li>
+            <li>Landing Pages</li>
+            <li>Site Optimization</li>
+          </ul>
         </section>
       </main>
     <Footer />

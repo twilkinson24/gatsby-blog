@@ -80,7 +80,7 @@ class Navbar extends Component {
                     ))}
                     <Link
                       className="navbar-item"
-                      to={`/contact`}
+                      to={`/blog`}
                     >
                       Blog
                     </Link>
