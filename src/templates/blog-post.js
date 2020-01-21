@@ -41,14 +41,14 @@ export default props => {
       >
         <li>
           {previous && (
-            <Link to={`/${previous.slug}`} rel="prev">
+            <Link to={`/blog/${previous.slug}`} rel="prev">
               ← Previous
             </Link>
           )}
         </li>
         <li>
           {next && (
-            <Link to={`/${next.slug}`} rel="next">
+            <Link to={`/blog/${next.slug}`} rel="next">
               Next →
             </Link>
           )}

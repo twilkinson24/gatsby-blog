@@ -14,13 +14,13 @@ const PostCard = props => {
       className={`column post-card is-one-third-desktop is-full-mobile`}
     >
       <BackgroundImage src={imageSrc} index={index}>
-        <Link to={`/${props.slug}`} />
+        <Link to={`/blog/${props.slug}`} />
       </BackgroundImage>
       <div className="post-excerpt">
         <p className="title">
           <Link
             dangerouslySetInnerHTML={{ __html: props.title }}
-            to={`/${props.slug}`}
+            to={`/blog/${props.slug}`}
           />
         </p>
         <div className="excerpt">

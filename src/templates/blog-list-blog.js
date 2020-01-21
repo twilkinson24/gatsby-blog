@@ -78,7 +78,7 @@ const BlogIndex = props => {
                     className={`pagination-link ${
                       currentPage === index ? `is-current` : ""
                     }`}
-                    to={`/${index === 1 ? "" : index}`}
+                    to={`/blog/${index === 1 ? "" : index}`}
                     aria-label={`Goto page ${index}`}
                   >
                     {index}

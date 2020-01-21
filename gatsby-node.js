@@ -44,7 +44,7 @@ exports.createPages = ({ graphql, actions }) => {
         index === posts.length - 1 ? null : posts[index + 1].node;
       const next = index === 0 ? null : posts[index - 1].node;
       createPage({
-        path: post.node.slug,
+        path: `/blog/${post.node.slug}`,
         component: blogPost,
         context: {
           slug: post.node.slug,
@@ -56,17 +56,20 @@ exports.createPages = ({ graphql, actions }) => {
 
      
 
-    const postsPerPage = 5;
-    const numPages = Math.ceil(posts.length / postsPerPage);
+    const postsPerPage = 3;
+    const postsPerPageBlog = 4;
+    // const numPages = Math.ceil(posts.length / postsPerPage);
+    const numPagesBlog = Math.ceil(posts.length / postsPerPageBlog);
+    const numPages = Math.ceil(posts.length / postsPerPageBlog);
 
-    Array.from({ length: numPages }).forEach((_, i) => {
+    Array.from({ length: numPagesBlog }).forEach((_, i) => {
       createPage({
         path: `/`,
         component: blogList,
         context: {
-          limit: 3,
+          limit: postsPerPage,
           skip: i * postsPerPage,
-          numPages,
+          numPagesBlog,
           currentPage: i + 1
         }
       });
@@ -74,11 +77,11 @@ exports.createPages = ({ graphql, actions }) => {
 
     Array.from({ length: numPages }).forEach((_, i) => {
       createPage({
-        path: i === 0 ? `/blog` : `/${i + 1}`,
+        path: i === 0 ? `/blog` : `/blog/${i + 1}`,
         component: blogListBlog,
         context: {
-          limit: postsPerPage,
-          skip: i * postsPerPage,
+          limit: postsPerPageBlog,
+          skip: i * postsPerPageBlog,
           numPages,
           currentPage: i + 1
         }

@@ -12,12 +12,40 @@ import PostCard from "../components/post-card";
  * @param {Number} last
  * @returns {Array}
  */
+const pagination = (current, last) => {
+  const delta = 2;
+  const left = current - delta;
+  const right = current + delta + 1;
 
+  let range = [];
+  let rangeWithDots = [];
+  let l;
+
+  for (let i = 1; i <= last; i++) {
+    if (i === 1 || i === last || (i >= left && i < right)) {
+      range.push(i);
+    }
+  }
+  for (let j of range) {
+    if (l) {
+      if (j - l !== 1) {
+        rangeWithDots.push("...");
+      }
+    }
+    rangeWithDots.push(j);
+    l = j;
+  }
+
+  return rangeWithDots;
+};
 
 const BlogIndex = props => {
   const { data } = props;
   const siteTitle = data.site.siteMetadata.title;
   const posts = data.allWordpressPost.edges;
+  const { currentPage, numPages } = props.pageContext;
+
+  const pagesWithDots = pagination(currentPage, numPages);
 
   return (
     <FrontPageLayout>
@@ -34,13 +62,13 @@ const BlogIndex = props => {
           />
         ))}
       </div>
-    
+      
     </FrontPageLayout>
   );
 };
 
 export const query = graphql`
-  query wordpressPosts($skip: Int!, $limit: Int!) {
+  query wordpressPostsBlogListFrontPage($skip: Int!, $limit: Int!) {
     site {
       siteMetadata {
         title
