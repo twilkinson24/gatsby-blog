@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link, graphql, StaticQuery } from "gatsby";
-import avatar from "../images/avatar-tw.jpg"
+import avatar from "../images/avatar-tw2.png"
 import compIcon from "../images/sm-comp.png"
 
 class Header extends Component {
@@ -105,38 +105,34 @@ class Header extends Component {
               </div>
               <div className="hero-body">
                 <div className="container">
-                  <section className="section columns">
-                    <div className="column">
-                      <h1 className="title"><span className="text-orange">Hey!</span>I'm Taylor</h1>
-                      <h2 className="subtitle"><span className="text-blue">and I love web development</span></h2>
-                      <ul>
-                        <li>
-                          <h3>Front-end Development</h3>
-                        </li>
-                        <li>
-                          <h3>WordPress Development</h3>
-                        </li>
-                        <li>
-                          <h3>Custom Web Solutions</h3>
-                        </li>
-                      </ul>
-                      <div className="action-buttons">
-                        <button className="button">Projects</button>
-                        <button className="button">Contact</button>
+                  <section className="section">
+                    <div className="columns">
+                      <div className="column">
+                        <h1 className="title"><span className="text-orange">Hey!</span>I'm Taylor</h1>
+                        <h2 className="subtitle"><span className="text-blue">and I love web development</span></h2>
+                        <ul>
+                          <li>
+                            <h3>Front-end Development</h3>
+                          </li>
+                          <li>
+                            <h3>WordPress Development</h3>
+                          </li>
+                          <li>
+                            <h3>Custom Web Solutions</h3>
+                          </li>
+                        </ul>
+                        <div className="action-buttons">
+                          <button className="button">Projects</button>
+                          <button className="button">Contact</button>
+                        </div>
                       </div>
-                    </div>
-                    <div className="column">
-                    <Link
-                    to="/"
-                    title="Gatsby Starter WordPress Community"
-                  >
-                    <img
-                      src={avatar}
-                      className="img-rounded"
-                      alt="Taylor Wilkinson - freelance web developer"
-                      style={{ width: "200px" }}
-                    />
-                  </Link>
+                      <div className="column hero-avatar-wrap">
+                        <img
+                          src={avatar}
+                          alt="Taylor Wilkinson - freelance web developer"
+                          style={{ width: "250px" }}
+                        />
+                      </div>
                     </div>
                   </section>
                 </div>

@@ -1,17 +1,21 @@
 import React from "react";
 
 const Footer = () => (
-  <footer className="footer">
-    <div className="content has-text-centered">
-      <p>
-        <strong>Gatsby Starter WordPress Community</strong> by{" "}
-        <a href="https://www.pablovila.com">Pablo Vila</a>
-      </p>
-      <p>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
-      </p>
+  <footer className="container">
+    <div className="section content">
+      <div className="columns">
+        <div className="column">
+        <p>
+        © Taylor Wilkinson{" "}{new Date().getFullYear()}
+          
+        </p>
+        <p>
+          Built with
+          {` `}
+          <a href="https://www.gatsbyjs.org">Gatsby</a> and WordPress
+        </p>
+        </div>
+      </div>
     </div>
   </footer>
 );
