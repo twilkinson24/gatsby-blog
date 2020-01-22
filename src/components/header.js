@@ -108,9 +108,9 @@ class Header extends Component {
                   <section className="section">
                     <div className="columns">
                       <div className="column">
-                        <h1 className="title"><span className="text-orange">Hey!</span>I'm Taylor</h1>
+                        <h1 className="title is-spaced"><span className="text-orange">Hey!</span>I'm Taylor</h1>
                         <h2 className="subtitle"><span className="text-blue">and I love web development</span></h2>
-                        <ul>
+                        <ul className="list-style-circle">
                           <li>
                             <h3>Front-end Development</h3>
                           </li>

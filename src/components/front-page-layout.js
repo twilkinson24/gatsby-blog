@@ -17,7 +17,7 @@ const FrontPageLayout = ({ children }) => (
             <section className="section">
               <div className="columns">
                 <div className="column">
-                  <h2>Recent Blog Posts</h2>
+                  <h3 className="title is-3">Recent Blog Posts</h3>
                 </div>
               </div>
               {children}
@@ -40,7 +40,7 @@ const FrontPageLayout = ({ children }) => (
 
         <div className="container">
           <section className="section services">
-            <h3>Services</h3>
+            <h3 className="title is-3">Services</h3>
             <div className="columns">
                 <div className="column">
                   Talk about what I do as a developer
@@ -64,7 +64,7 @@ const FrontPageLayout = ({ children }) => (
         <div className="gray-bg">
           <div className="container">
             <section className="section">
-            <h3>Projects</h3>
+            <h3 className="title is-3">Projects</h3>
               <div className="columns">
                   <div className="column">
                     Put the project cards here

@@ -95,20 +95,34 @@ footer.footer {
   background-color: rgba(255, 255, 255, .9);
   border-bottom: 1px solid #ccc;
   .hero-body {
-    padding-top: 3rem;
+    padding-top: 2rem;
     padding-bottom: 0;
 
     @media only screen and (max-width: 768px) {
       text-align: center;
+      padding-top: 1rem;
     }
 
     .section {
       padding-bottom: 0;
+
+      .list-style-circle {
+        list-style-type: circle;
+        padding-left: 1.5rem;
+        margin-bottom: 1.5rem;
+
+        li h3 {
+          font-weight: 500;
+        }
+      }
       
       .action-buttons button.button {
         background-color: #2563ff;
         color: #fff;
-        margin: 1rem 0 2rem 0;
+        margin: 0 .5rem 2rem 0rem;
+      }
+      @media only screen and (max-width: 768px) {
+        margin: 0 .5rem 2rem .5rem;
       }
       
       .hero-avatar-wrap {
@@ -133,14 +147,13 @@ footer.footer {
     right: 0;
     width: 300px;
     z-index: -1;
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
 
     img {
       width: 200px;
       padding: 10px 0 0 0;
-
-      @media only screen and (max-width: 768px) {
-        display: none;
-      }
     }
   }
 
@@ -164,7 +177,7 @@ h2.site-title {
 }
 
 .gray-bg {
-  background-color: #fafafa;
+  background-color: #f3f3f3;
   z-index: 5;
 }
 
