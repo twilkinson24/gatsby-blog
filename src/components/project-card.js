@@ -1,41 +1,66 @@
-import React from "react";
+import React, {Component} from "react";
 import { Link } from "gatsby";
 import BackgroundImage from "./background-image.js";
 
-const ProjectCard = props => {
-  let imageSrc = null;
-  if (props.media && props.media.localFile)
-    imageSrc = props.media.localFile.childImageSharp.fixed.src;
 
-  const index = props.index;
 
-  console.log('props')
-  console.log(props)
+class ProjectCard extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: props,
+      isModalOpen: false
+ }
+  }
 
-  console.log(index)
 
+  // This https://medium.com/@pitipatdop/little-neat-trick-to-capture-click-outside-react-component-5604830beb7f
+
+  render() {
   return (
     <div
       className={`column post-card`}
     >
-      <BackgroundImage src={imageSrc} index={index}>
-        <Link to={`/blog/${props.slug}`} />
+      <BackgroundImage src={this.state.data.media.localFile.childImageSharp.fixed.src}>
+        <Link to={`/blog/}`} />
       </BackgroundImage>
       <div className="post-excerpt">
         <p className="title">
         <Link
-            dangerouslySetInnerHTML={{ __html: props.title }}
+            dangerouslySetInnerHTML={{ __html: this.state.data.title }}
             to={`/blog/`}
           />
         </p>
         <div className="excerpt">
           <div className="content">
-            <p dangerouslySetInnerHTML={{ __html: props.description }} />
+            <p dangerouslySetInnerHTML={{ __html: this.state.data.description }} />
+            <p onClick={() => this.setState({ isModalOpen: true})}>Click here</p>
           </div>
         </div>
+
+
+        <div className={`modal ${this.state.isModalOpen ? 'is-active' : ''}`}>
+          <div className="modal-background"></div>
+          <div className="modal-card">
+            <header className="modal-card-head">
+              <p className="modal-card-title">Modal title</p>
+              <button className="delete" aria-label="close" onClick={() => this.setState({ isModalOpen: false})}></button>
+            </header>
+            <section className="modal-card-body">
+              <p>This is the modal body</p>
+            </section>
+            <footer className="modal-card-foot">
+              <button className="button is-success">Save changes</button>
+              <button className="button">Cancel</button>
+            </footer>
+          </div>
+        </div>
+
+
       </div>
     </div>
   );
+  }
 };
 
 export default ProjectCard;
