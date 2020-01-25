@@ -12,18 +12,25 @@ const ProjectCard = props => {
   console.log('props')
   console.log(props)
 
+  console.log(index)
+
   return (
     <div
-      className={`column post-card is-one-third-desktop is-full-mobile`}
+      className={`column post-card`}
     >
-      
+      <BackgroundImage src={imageSrc} index={index}>
+        <Link to={`/blog/${props.slug}`} />
+      </BackgroundImage>
       <div className="post-excerpt">
         <p className="title">
-        
+        <Link
+            dangerouslySetInnerHTML={{ __html: props.title }}
+            to={`/blog/`}
+          />
         </p>
         <div className="excerpt">
           <div className="content">
-            <p>demo</p>
+            <p dangerouslySetInnerHTML={{ __html: props.description }} />
           </div>
         </div>
       </div>

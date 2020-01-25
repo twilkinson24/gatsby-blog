@@ -46,6 +46,8 @@ const BlogIndex = props => {
   const { currentPage, numPages } = props.pageContext;
 //   const projects = data.allWordpressProjects.edges;
 
+console.log('data 2')
+console.log(data)
 
   const pagesWithDots = pagination(currentPage, numPages);
 
@@ -64,7 +66,6 @@ const BlogIndex = props => {
           />
         ))}
       </div>
-      
     </FrontPageLayout>
   );
 };
@@ -74,21 +75,6 @@ export const query = graphql`
     site {
       siteMetadata {
         title
-      }
-    }
-    allWordpressWpProjects {
-      edges {
-        node {
-           acf {
-            project_title
-            project_description
-            github_link
-            live_demo_url
-            project_image {
-              source_url
-            }
-          }
-        }
       }
     }
     allWordpressPost(

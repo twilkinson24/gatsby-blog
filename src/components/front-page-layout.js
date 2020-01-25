@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 import Header from "./header";
 import Footer from "./footer";
+import Projects from "../templates/projects";
 import "../style/style.scss";
 import avatarTwo from "../images/avatar-placeholder.jpg"
 import avatarTay from "../images/test-2.jpg"
@@ -64,21 +65,8 @@ const FrontPageLayout = ({ children }) => (
         <div className="gray-bg">
           <div className="container">
             <section className="section">
-            <h3 className="title is-3">Projects</h3>
-              <div className="columns">
-                  <div className="column">
-                    Put the project cards here
-                  </div>
-                  <div className="column">
-                    <p>I guess I would have some projects here.</p>
-                    <ul>
-                      <li>Custom Theme Development</li>
-                      <li>Genesis Theme Development</li>
-                      <li>Headless WordPress With Gatsby.js</li>
-                      
-                    </ul>
-                  </div>
-              </div>
+              <h3 className="title is-3">Projects</h3>
+              <Projects />
             </section>
           </div>
         </div>
