@@ -44,6 +44,8 @@ const BlogIndex = props => {
   const siteTitle = data.site.siteMetadata.title;
   const posts = data.allWordpressPost.edges;
   const { currentPage, numPages } = props.pageContext;
+//   const projects = data.allWordpressProjects.edges;
+
 
   const pagesWithDots = pagination(currentPage, numPages);
 
@@ -72,6 +74,21 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+      }
+    }
+    allWordpressWpProjects {
+      edges {
+        node {
+           acf {
+            project_title
+            project_description
+            github_link
+            live_demo_url
+            project_image {
+              source_url
+            }
+          }
+        }
       }
     }
     allWordpressPost(
