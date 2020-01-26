@@ -9,21 +9,24 @@ class ProjectCard extends Component {
     super(props);
     this.state = {
       data: props,
+      imageSrc: props.media,
       isModalOpen: false
  }
+   
+
+
+      console.log('image source')
+      console.log(this.state.imageSrc)
   }
 
-
-  // This https://medium.com/@pitipatdop/little-neat-trick-to-capture-click-outside-react-component-5604830beb7f
+  // This https://stackoverflow.com/questions/32553158/detect-click-outside-react-component
 
   render() {
   return (
     <div
-      className={`column post-card`}
+      className={`column post-card is-one-third-desktop is-full-mobile`}
     >
-      <BackgroundImage src={this.state.data.media.localFile.childImageSharp.fixed.src}>
-        <Link to={`/blog/}`} />
-      </BackgroundImage>
+      <BackgroundImage src={this.state.imageSrc} />
       <div className="post-excerpt">
         <p className="title">
         <Link
@@ -31,7 +34,7 @@ class ProjectCard extends Component {
             to={`/blog/`}
           />
         </p>
-        <div className="excerpt">
+        <div className="excerpt" onClick={() => this.setState({ isModalOpen: true})}>
           <div className="content">
             <p dangerouslySetInnerHTML={{ __html: this.state.data.description }} />
             <p onClick={() => this.setState({ isModalOpen: true})}>Click here</p>

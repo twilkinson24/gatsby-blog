@@ -57,7 +57,7 @@ exports.createPages = ({ graphql, actions }) => {
      
 
     const postsPerPage = 3;
-    const postsPerPageBlog = 4;
+    const postsPerPageBlog = 6;
     // const numPages = Math.ceil(posts.length / postsPerPage);
     const numPagesBlog = Math.ceil(posts.length / postsPerPageBlog);
     const numPages = Math.ceil(posts.length / postsPerPageBlog);
@@ -68,7 +68,7 @@ exports.createPages = ({ graphql, actions }) => {
         component: blogList,
         context: {
           limit: postsPerPage,
-          skip: i * postsPerPage,
+          skip: 0,
           numPagesBlog,
           currentPage: i + 1
         }

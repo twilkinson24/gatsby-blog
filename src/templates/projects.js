@@ -41,7 +41,6 @@ console.log(data)
                         github_link
                         live_demo_url
                         project_image {
-                          media_type
                           localFile {
                             childImageSharp {
                               fixed(width: 700) {
@@ -49,21 +48,21 @@ console.log(data)
                               }
                             }
                           }
-                        }
                       }
                     }
                   }
                 }
               }
+            }
               `}
               render={data => (
-                <div className="projects-wrapper">
+                <div className="projects-wrapper columns">
                   {data.allWordpressAcfProjects.edges.map((project, index) => (
                       <ProjectCard
                         key={`${index}1234`}
                         title={project.node.acf.project_title}
                         description={project.node.acf.project_description}
-                        media={project.node.acf.project_image}
+                        media={project.node.acf.project_image.localFile.childImageSharp.fixed.src}
                         index={index}
                       />
                     ))}

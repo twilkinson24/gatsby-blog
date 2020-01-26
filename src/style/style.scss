@@ -4,6 +4,41 @@
 // Importing Bulma from node_modules
 @import "~bulma/bulma.sass";
 
+body {
+  font-size: 1.1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+article h2 {
+  font-size: 2rem;
+  color: #363636;
+}
+
+article h3 {
+  font-size: 1.5rem;
+}
+
+article h2,
+article h3,
+article h4 {
+  color: #363636;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+article ul {
+  display: block;
+  list-style-type: disc;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 40px;
+}
+
 @media screen and (min-width: 1088px) {
   .post-card.column.is-one-third-desktop {
     width: calc(33.3333% - 2rem);
@@ -82,8 +117,8 @@
   flex-grow: 1;
 }
 
-footer.footer {
-  padding-top: 0;
+footer {
+  padding-top: 1.75rem;
 }
 
 /* Taylor's edits */

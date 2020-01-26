@@ -15,21 +15,23 @@ export default props => {
   return (
     <SimpleLayout title={siteTitle}>
       <SEO title={post.title} keywords={[`gatsby`, `blog`, `wordpress`]} />
-      <section className="section has-text-centered">
-        <span className="is-uppercase">
-          {date} |{" "}
-          {post.categories.map((c, index) => (
-            <span key={index}>{c.name}</span>
-          ))}
-        </span>
-        <h1
-          className="title is-size-2 has-text-weight-bold is-bold-light"
-          dangerouslySetInnerHTML={{ __html: post.title }}
-        />
-      </section>
-      <section className="section">
-        <div dangerouslySetInnerHTML={{ __html: post.content }} />
-      </section>
+      <article>
+        <header className="has-text-centered">
+          <span className="is-uppercase">
+            {date} |{" "}
+            {post.categories.map((c, index) => (
+              <span key={index}>{c.name}</span>
+            ))}
+          </span>
+          <h1
+            className="title is-size-2 has-text-weight-bold is-bold-light"
+            dangerouslySetInnerHTML={{ __html: post.title }}
+          />
+        </header>
+        <section className="section">
+          <div dangerouslySetInnerHTML={{ __html: post.content }} />
+        </section>
+      </article>
       <ul
         style={{
           display: `flex`,

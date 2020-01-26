@@ -49,7 +49,6 @@ const BlogIndex = props => {
 console.log('data 2')
 console.log(data)
 
-  const pagesWithDots = pagination(currentPage, numPages);
 
   return (
     <FrontPageLayout>
