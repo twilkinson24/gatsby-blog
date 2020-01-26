@@ -23,7 +23,7 @@ const PostCard = props => {
             to={`/blog/${props.slug}`}
           />
         </p>
-        <div className="excerpt">
+        <div className={props.excerpt === 'hide' ? 'display-none' : 'excerpt'}>
           <div className="content">
             <p dangerouslySetInnerHTML={{ __html: props.excerpt }} />
           </div>

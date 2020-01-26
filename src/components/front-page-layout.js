@@ -5,8 +5,8 @@ import Header from "./header";
 import Footer from "./footer";
 import Projects from "../templates/projects";
 import "../style/style.scss";
-import avatarTwo from "../images/avatar-placeholder.jpg"
-import avatarTay from "../images/test-2.jpg"
+import avatarTwo from "../images/TaylorAvatar.png"
+import brightIdeaImg from "../images/icons8-developer-64.png"
 
 
 const FrontPageLayout = ({ children }) => (
@@ -16,49 +16,44 @@ const FrontPageLayout = ({ children }) => (
         <div className="gray-bg">
           <div className="container">
             <section className="section">
-              <div className="columns">
-                <div className="column">
-                  <h3 className="title is-3">Recent Blog Posts</h3>
-                </div>
-              </div>
+              <h3 className="title is-3">Recent Blog Posts</h3>
               {children}
             </section>
           </div>
         </div>
 
-          <div className="img-far-right">
-            <div style={{ position: 'relative' }}>
-              <p style={{position: 'absolute', width: '100%'}}>
-                <strong>Websites built for you!</strong>
-              </p>
-              <img
-                src={avatarTay}
-                className="img-far-right"
-                alt="Taylor Wilkinson - freelance web developer"
-              />
+        <div className="services-wrap">
+          <div className="container">
+            <section className="section services">
+              <h3 className="title is-3">Services</h3>
+              <div className="columns">
+                <div className="column is-4 is-mobile">
+                    <p>
+                      <strong>What I love to do</strong> is find practical solutions and collaborate quality people.
+                    </p>
+                    <p>WordPress is generally my tool of choice, but no two projects are the same. Building modern, elegant and accessible websites that provide value for my clients is <em>always the goal.</em></p>
+                    <p><a href="#">More about me and the web dev tools I use</a></p>
+                  </div>
+                  <div className="column is-one-quarter has-text-centered">
+                    <img src={avatarTwo} className="cartoon-avatar" alt="Cartoon Avatar of Taylor Wilkinson" />
+                  </div>
+                  <div className="column is-5 is-mobile">
+                  <p><strong>Recent projects have involved:</strong></p>
+                    <ul>
+                      <li>PSD to WordPress</li>
+                      <ul>
+                        <li>Custom Theme Development</li>
+                        <li>Genesis Theme Development</li>
+                        <li>Divi &amp; Elementor Development</li>
+                      </ul>
+                      <li>Headless WordPress With Gatsby.js</li>
+                      <li>WordPress Site Optimization</li>
+                      <li>Landing Pages</li>
+                    </ul>
+                  </div>
               </div>
+            </section>
           </div>
-
-        <div className="container">
-          <section className="section services">
-            <h3 className="title is-3">Services</h3>
-            <div className="columns">
-                <div className="column">
-                  Talk about what I do as a developer
-                </div>
-                <div className="column">
-                  <p>I guess I would have some services here.</p>
-                  <ul>
-                    <li>Custom Theme Development</li>
-                    <li>Genesis Theme Development</li>
-                    <li>Headless WordPress With Gatsby.js</li>
-                    <li>PSD to WordPress</li>
-                    <li>Landing Pages</li>
-                    <li>Site Optimization</li>
-                  </ul>
-                </div>
-            </div>
-          </section>
         </div>
         
         

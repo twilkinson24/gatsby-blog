@@ -8,13 +8,11 @@ class ProjectCard extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: props,
+      projectData: props,
       imageSrc: props.media,
       isModalOpen: false
  }
    
-
-
       console.log('image source')
       console.log(this.state.imageSrc)
   }
@@ -26,35 +24,35 @@ class ProjectCard extends Component {
     <div
       className={`column post-card is-one-third-desktop is-full-mobile`}
     >
-      <BackgroundImage src={this.state.imageSrc} />
+      <BackgroundImage src={this.state.imageSrc} onClick={() => this.setState({ isModalOpen: false})}/>
       <div className="post-excerpt">
         <p className="title">
-        <Link
-            dangerouslySetInnerHTML={{ __html: this.state.data.title }}
-            to={`/blog/`}
+        <span className="modal-link"
+            dangerouslySetInnerHTML={{ __html: this.state.projectData.title }}
+            onClick={() => this.setState({ isModalOpen: true})}
           />
         </p>
-        <div className="excerpt" onClick={() => this.setState({ isModalOpen: true})}>
-          <div className="content">
-            <p dangerouslySetInnerHTML={{ __html: this.state.data.description }} />
-            <p onClick={() => this.setState({ isModalOpen: true})}>Click here</p>
-          </div>
-        </div>
 
 
         <div className={`modal ${this.state.isModalOpen ? 'is-active' : ''}`}>
           <div className="modal-background"></div>
           <div className="modal-card">
             <header className="modal-card-head">
-              <p className="modal-card-title">Modal title</p>
+              <p className="modal-card-title"><span
+              dangerouslySetInnerHTML={{ __html: this.state.projectData.title }}
+              />
+              </p>
               <button className="delete" aria-label="close" onClick={() => this.setState({ isModalOpen: false})}></button>
             </header>
             <section className="modal-card-body">
-              <p>This is the modal body</p>
+              <p dangerouslySetInnerHTML={{ __html: this.state.projectData.description }} />
             </section>
             <footer className="modal-card-foot">
-              <button className="button is-success">Save changes</button>
-              <button className="button">Cancel</button>
+              <Link
+              to={this.state.projectData.github_link}>Github</Link>
+              <span> | </span>
+              <Link
+              to={this.state.projectData.live_demo_url}>See it live</Link>
             </footer>
           </div>
         </div>

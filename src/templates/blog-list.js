@@ -58,7 +58,7 @@ console.log(data)
           <PostCard
             key={post.node.wordpress_id}
             title={post.node.title}
-            excerpt={post.node.excerpt}
+            excerpt={'hide'}
             media={post.node.featured_media}
             slug={post.node.slug}
             index={index}

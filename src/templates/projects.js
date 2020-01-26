@@ -56,12 +56,14 @@ console.log(data)
             }
               `}
               render={data => (
-                <div className="projects-wrapper columns">
+                <div className="projects-wrapper">
                   {data.allWordpressAcfProjects.edges.map((project, index) => (
                       <ProjectCard
                         key={`${index}1234`}
                         title={project.node.acf.project_title}
                         description={project.node.acf.project_description}
+                        github_link={project.node.acf.github_link}
+                        live_demo_url={project.node.acf.live_demo_url}
                         media={project.node.acf.project_image.localFile.childImageSharp.fixed.src}
                         index={index}
                       />
@@ -74,32 +76,3 @@ console.log(data)
 };
 
 export default Projects
-
-/*
-export const query = graphql`
-  query wordpressACFProjects {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allWordpressAcfProjects {
-      edges {
-        node {
-          acf {
-            project_title
-            project_description
-            github_link
-            live_demo_url
-            project_image {
-              source_url
-            }
-          }
-        }
-      }
-    }
-  }
-`;
-
-export default Projects;
-*/
