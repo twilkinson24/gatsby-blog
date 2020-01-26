@@ -39,11 +39,10 @@ const FrontPageLayout = ({ children }) => (
                   </div>
                   <div className="column is-5 is-mobile">
                   <p><strong>Recent projects have involved:</strong></p>
-                    <ul>
+                    <ul className="list-style-circle">
                       <li>PSD to WordPress</li>
                       <ul>
-                        <li>Custom Theme Development</li>
-                        <li>Genesis Theme Development</li>
+                        <li>Custom-coded Theme Development</li>
                         <li>Divi &amp; Elementor Development</li>
                       </ul>
                       <li>Headless WordPress With Gatsby.js</li>

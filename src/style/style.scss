@@ -150,6 +150,21 @@ footer {
   }
 }
 
+.list-style-circle {
+  list-style-type: circle;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+
+  @media only screen and (max-width: 768px) {
+    padding: 0;
+    list-style-type: none;
+  }
+
+  li h3 {
+    font-weight: 500;
+  }
+}
+
 
 /* Taylor's edits */
 .display-none {
@@ -178,16 +193,6 @@ footer {
       }
       @media only screen and (max-width: 400px) {
         padding: 3rem .5rem 0 .5rem;
-      }
-
-      .list-style-circle {
-        list-style-type: circle;
-        padding-left: 1.5rem;
-        margin-bottom: 1.5rem;
-
-        li h3 {
-          font-weight: 500;
-        }
       }
       
       .action-buttons button.button {
@@ -300,7 +305,6 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
     }
     ul {
       display: block;
-      list-style-type: disc;
       margin-top: 1rem;
       margin-bottom: 1rem;
       margin-left: 0;
