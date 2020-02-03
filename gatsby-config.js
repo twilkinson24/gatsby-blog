@@ -17,6 +17,7 @@ module.exports = {
         path: `${__dirname}/src/images`
       }
     },
+    
     /*
      * Gatsby's data processing layer begins with “source”
      * plugins. Here the site sources its data from WordPress.
@@ -149,12 +150,17 @@ module.exports = {
             variants: [`400`, `700`]
           },
           {
-            family: `Parisienne`
+            family: `Neuton`,
+            variants: [`400`, `700`]
+          },
+          {
+            family: `BenchNine`,
+            variants: [`400`, `700`]
           },
         ],
       },
     },
-
+    `gatsby-plugin-scroll-reveal`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,

@@ -6,6 +6,13 @@
 
 body {
   font-size: 1.1rem;
+  font-family: 'BenchNine', Helvetica, sans-serif;
+  background-color: $light-gray;
+  background-image: linear-gradient(rgba(255, 255, 255, .9), rgba(255, 255, 255, .9));
+}
+
+h1,h2,h3,h4,h5 {
+  font-family: 'Neuton', Helvetica, sans-serif;
 }
 
 p {
@@ -15,6 +22,7 @@ p {
 main a {
   color: $content-link;
 }
+
 
 article h2 {
   font-size: 2rem;
@@ -170,16 +178,39 @@ footer {
 .display-none {
   display: none;
 }
+
+.is-fixed-top nav.navbar {
+  background-color: #fff;
+}
+.navbar-item .logo-main ,
+.navbar-item .logo-sticky {
+  max-height: 100px;
+}
+.navbar-item .logo-main {
+  width: 85px;
+}
+.navbar-item .logo-sticky {
+  display: none;
+  width: 100px;
+}
+.is-fixed-top .logo-main {
+  display: none;
+}
+.is-fixed-top .navbar-item .logo-sticky {
+  display: block;
+}
+/* end */
+
 .hero,
 .hero.is-medium {
-  background-image: linear-gradient(#fff, rgba(255, 255, 255, .8)),
-  url(../images/illustration-of-web-design-template-vector.jpg);
+  background-color: transparent;
+  background-image: linear-gradient(rgba(53, 57, 65, .1),rgba(53, 57, 65, .1)),
+  url(../images/lakeMI-sm.jpg);
+  background-size: cover;
+  min-height: 90vh;
 
-  background-color: rgba(255, 255, 255, .9);
-  border-bottom: 1px solid #ccc;
   .hero-body {
-    padding-top: 2rem;
-    padding-bottom: 0;
+    padding: 6rem 0;
 
     @media only screen and (max-width: 768px) {
       text-align: center;
@@ -226,12 +257,6 @@ footer {
   border-radius: 100%;
 }
 
-.site-title {
-  color: #363636;
-  font-family: 'Parisienne', 'Times New Roman', Times, serif;
-  font-size: 3rem;
-}
-
 h2.site-title {
   font-size: 1rem;
 }
@@ -247,14 +272,15 @@ h2.site-title {
 }
 
 .gray-bg {
-  background-color: #f3f3f3;
+  background-color: transparent;
   z-index: 5;
+  
 }
 
 /* nav */
 .navbar.not-homepage {
-  background-image: linear-gradient(#fff, rgba(255, 255, 255, .8)),
-  url(../images/illustration-of-web-design-template-vector.jpg);
+  background-image: linear-gradient(rgba(49, 47, 47, 0.8), rgba(49, 47, 47, 0.8));
+ // url(../images/illustration-of-web-design-template-vector.jpg);
   
   background-color: rgba(255, 255, 255, .9);
   border-bottom: 1px solid #ccc;
@@ -263,6 +289,14 @@ h2.site-title {
 
 .text-blue {
   color: #2563ff;
+}
+
+.navbar { 
+  .navbar-item {
+    font-family: 'Neuton', Helvetica, sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+  }
 }
 
 /* nav animation */
@@ -297,8 +331,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 
 /* Services Section */
 .services-wrap {
-  background-image: linear-gradient(rgba(255, 255, 255, .95), rgba(255, 255, 255, .95)),
-  url(../images/illustration-of-web-design-template-vector.jpg);
+  background-color: transparent;
   .services {
     .cartoon-avatar {
       max-width: 200px;

@@ -5,6 +5,7 @@ import Navbar from "./navbar";
 import Footer from "./footer";
 import "../style/style.scss";
 
+
 const SimpleLayout = ({ children }) => (
   <>
     <Navbar />
