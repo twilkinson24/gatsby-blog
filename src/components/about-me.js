@@ -19,6 +19,14 @@ const AboutMe = () => (
                             <p>
                                 <em>Providing value for my clients is always the goal.</em>
                             </p>
+                            <div className="cta-buttons">
+                                <button className="button bg-dark-blue">
+                                    Hire Me
+                                </button>
+                                <button className="button blue-bg-trans">
+                                    Say What's Up
+                                </button>
+                            </div>
                         </div>
                     </div>
                     <div className="column">

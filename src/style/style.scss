@@ -6,13 +6,21 @@
 
 body {
   font-size: 1.1rem;
-  font-family: 'BenchNine', Helvetica, sans-serif;
+  font-family: 'Open Sans', Helvetica, sans-serif;
   background-color: $light-gray;
-  background-image: linear-gradient(rgba(255, 255, 255, .9), rgba(255, 255, 255, .9));
+  background-image: linear-gradient(rgba(255, 255, 255, .95), rgba(255, 255, 255, .95)),
+  url(../images/illustration-of-web-design-template-vector.jpg);
 }
 
 h1,h2,h3,h4,h5 {
   font-family: 'Montserrat', Helvetica, sans-serif;
+}
+
+section.section {
+  padding: 6rem 1.5rem 0;
+  @media only screen and (min-width: 1300px) {
+    padding: 6rem 6rem 0 6rem;
+  }
 }
 
 p {
@@ -23,6 +31,15 @@ p.lead {
   font-family: 'Montserrat';
   font-weight: 300;
   font-size: 1.2rem;
+}
+
+.bottom-line {
+  width: 80px;
+  height: 2px;
+  margin: 15px auto 0;
+  display: inline-block;
+  background:
+  #bcbcbc;
 }
 
 main a {
@@ -194,10 +211,12 @@ footer {
 }
 .navbar-item .logo-main {
   width: 85px;
+  animation: logoResizeDown 350ms ease-out;
 }
 .navbar-item .logo-sticky {
   display: none;
   width: 100px;
+  animation: logoResizeUp 350ms ease-out;
 }
 .is-fixed-top .logo-main {
   display: none;
@@ -234,7 +253,7 @@ footer {
       
       .action-buttons {
         margin: 100px 0;
-      
+     /* 
         button.button {
           background-color: transparent;
           border-color: #fff;
@@ -248,11 +267,11 @@ footer {
           padding-top: calc(0.5em - 1px);
 
           &:hover {
-            color: #040c2c;
-            border-color: #040c2c;
+            color: $dark-blue;
+            border-color: $dark-blue;
             transition: all 150ms ease-in;
           }
-        }
+        } */
       }
       
       .hero-avatar-wrap {
@@ -291,7 +310,7 @@ h2.site-title {
   color: #fff;
 }
 .text-d-blue {
-  color: #040c2c;
+  color:  $dark-blue;
 }
 .center-vertically {
   display: flex;
@@ -307,33 +326,28 @@ h2.site-title {
 
 /* nav */
 .navbar.not-homepage {
-  background-image: linear-gradient(rgba(49, 47, 47, 0.8), rgba(49, 47, 47, 0.8));
- // url(../images/illustration-of-web-design-template-vector.jpg);
-  
-  background-color: rgba(255, 255, 255, .9);
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 50px;
-}
+  /* background-image: linear-gradient(rgba(49, 47, 47, 0.7), rgba(49, 47, 47, 0.7)),
+  url(../images/lake-michigan-dunes.jpg); */
+  background-image: linear-gradient(rgba(83, 81, 81, 0.8), rgba(167, 164, 164, 0.7)),
+  url(../images/lake-michigan-dunes.jpg);
+  padding-top: 20px;
+  background-position: bottom;
+  background-size: cover;
+  transition: all 150ms ease-out;
 
-.text-blue {
-  color: #040c2c;
-}
-
-.is-fixed-top {
-  .navbar {
-    .navbar-item {
-        color: #040c2c;
-    }
+  .navbar-item {
+    color: #fff;
   }
 }
 
 .navbar { 
   .navbar-item {
     font-family: 'Montserrat', Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
     color: #fff;
     text-transform: uppercase;
-    font-size: 1rem;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
   }
 }
 
@@ -367,6 +381,16 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   }
 }
 
+/* About Me Section */
+#about-me {
+  .about-me-img {
+    text-align: right;
+    img {
+      max-width: 300px;
+    }
+  }
+}
+
 /* Services Section */
 .services-wrap {
   background-color: transparent;
@@ -393,5 +417,59 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
         padding-left: 1.5rem;
       }
     }
+  }
+}
+
+.cta-buttons {
+  button.button {
+    color: #fff;
+    font-size: 1.1rem;
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    font-weight: 500;
+    padding: 1.5rem 2rem;
+    margin-right: 1rem;
+    background-color: transparent;
+    border: 2px solid;
+  }
+  button.button.bg-dark-blue {
+    background-color: $dark-blue;
+    border-color: $dark-blue;
+    color: #fff;
+    &:hover {
+      background-color: transparent;
+      border-color: $dark-blue;
+      color: $dark-blue;
+      transition: all 50ms ease-out;
+    }
+  }
+  button.button.blue-bg-trans {
+    border-color: $dark-blue;
+    color: $dark-blue;
+
+    &:hover {
+      background-color: $dark-blue;
+      border-color: $dark-blue;
+      color: #fff;
+      transition: all 50ms ease-out;
+    }
+  }
+  
+}
+
+/* animations */
+@keyframes logoResizeUp {
+	0% { 
+    width: 85px; 
+  }
+	100% { 
+    width: 100px;
+  }
+}
+@keyframes logoResizeDown {
+	0% { 
+    width: 100px; 
+  }
+	100% { 
+    width: 85px;
   }
 }

@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Link, graphql, StaticQuery } from "gatsby";
-import siteLogo from "../images/logo.png"
+import logo from "../images/logo-trans-bg.png"
+import logoSticky from "../images/logo-orange-trans-bg.png"
+import Sticky from 'react-stickynode'
 
 class Navbar extends Component {
   componentDidMount() {
@@ -23,80 +25,54 @@ class Navbar extends Component {
 
   render() {
     return (
-      <StaticQuery
-        query={graphql`
-          {
-            allWordpressPage {
-              edges {
-                node {
-                  title
-                  wordpress_id
-                  slug
-                }
-              }
-            }
-          }
-        `}
-        render={data => {
-          const wordpressPages = data.allWordpressPage.edges;
-          return (
-            <nav
-              className="navbar not-homepage"
-              role="navigation"
-              aria-label="main-navigation"
-            >
-              <div className="container">
-                <div className="navbar-brand">
-                  <Link
-                    to="/"
-                    className="navbar-item"
-                    title="Gatsby Starter WordPress Community"
-                  >
-                    <img src={siteLogo} alt="cartoon computer with code" style={{ maxHeight: '80px', marginRight: '1rem'}} />
-                    
-                  </Link>
-                  <div className="navbar-burger burger" data-target="navMenu">
-                    <span />
-                    <span />
-                    <span />
-                  </div>
-                </div>
-                <div id="navMenu" className="navbar-menu">
-                  <div className="navbar-end has-text-centered">
-                    <Link
-                        className="navbar-item"
-                        to={`/`}
-                    >
-                      Services
-                    </Link>
-                    {wordpressPages.map(page => (
-                      <Link
-                        className="navbar-item"
-                        to={`/${page.node.slug}`}
-                        key={page.node.wordpress_id}
-                      >
-                        {page.node.title}
-                      </Link>
-                    ))}
-                    <Link
-                      className="navbar-item"
-                      to={`/blog`}
-                    >
-                      Blog
-                    </Link>
-                    <Link
-                      className="navbar-item"
-                      to={`/contact`}
-                    >
-                      Contact
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </nav>
-          );
-        }}
-      />
+      <Sticky top={0} innerZ={9999} activeClass="is-fixed-top">
+                  <nav className="navbar not-homepage">
+                    <div className="container">
+                      <div className="navbar-brand">
+                        <Link
+                          to="/"
+                          className="navbar-item"
+                          title="Gatsby Starter WordPress Community"
+                        >   
+                          <img src={logo} className="logo-main" alt="TW logo for Taylor Wilkinson" />
+                          <img src={logoSticky} className="logo-sticky" alt="TW logo for Taylor Wilkinson" />
+                          
+                        </Link>
+                        <div
+                          className="navbar-burger burger"
+                          data-target="navMenu"
+                        >
+                          <span />
+                          <span />
+                          <span />
+                        </div>
+                      </div>
+                      <div id="navMenu" className="navbar-menu">
+                        <div className="navbar-end has-text-centered">
+                          <Link
+                            className="navbar-item"
+                            to={`/`}
+                          >
+                            Services
+                          </Link>
+                          
+                          <Link
+                              className="navbar-item"
+                              to={`/blog`}
+                            >
+                            Blog
+                          </Link>
+                          <Link
+                              className="navbar-item"
+                              to={`/contact`}
+                            >
+                            Contact
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </nav>
+                  </Sticky>
     );
   }
 }

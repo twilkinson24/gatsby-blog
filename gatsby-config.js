@@ -147,15 +147,15 @@ module.exports = {
         fonts: [
           {
             family: `Montserrat`,
-            variants: [`400`, `700`]
+            variants: [`400`, `500`, `700`]
           },
           {
             family: `Neuton`,
             variants: [`400`, `700`]
           },
           {
-            family: `BenchNine`,
-            variants: [`400`, `700`]
+            family: `Open Sans`,
+            variants: [`400`, `500`, `700`]
           },
         ],
       },
