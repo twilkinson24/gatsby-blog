@@ -1,8 +1,6 @@
 import React from "react";
 import { graphql, StaticQuery, Link } from 'gatsby'
 
-
-import SEO from "../components/seo";
 import ProjectCard from "../components/project-card";
 
 /**
@@ -23,55 +21,62 @@ console.log('data')
 console.log(data)
 
   return (
-      <div className="projects-wrap">
-        <SEO title={'Title Here'} keywords={[`gatsby`, `blog`, `wordpress`]} />
-        <div className="columns is-multiline is-mobile blog-list">
-          <StaticQuery query={graphql`{
-                site {
-                  siteMetadata {
-                    title
-                  }
-                }
-                allWordpressAcfProjects {
-                  edges {
-                    node {
-                      acf {
-                        project_title
-                        project_description
-                        github_link
-                        live_demo_url
-                        project_image {
-                          localFile {
-                            childImageSharp {
-                              fixed(width: 700) {
-                                src
+    <div className="gray-bg">
+          <div className="container">
+            <section className="section">
+                <h3 className="title is-3 has-text-centered text-orange">Some Recent Projects</h3>
+                <p className="has-text-centered"><span className="bottom-line"></span></p>
+                <div className="projects-wrap">
+                  <div className="columns is-multiline is-mobile blog-list">
+                    <StaticQuery query={graphql`{
+                          site {
+                            siteMetadata {
+                              title
+                            }
+                          }
+                          allWordpressAcfProjects {
+                            edges {
+                              node {
+                                acf {
+                                  project_title
+                                  project_description
+                                  github_link
+                                  live_demo_url
+                                  project_image {
+                                    localFile {
+                                      childImageSharp {
+                                        fixed(width: 700) {
+                                          src
+                                        }
+                                      }
+                                    }
+                                }
                               }
                             }
                           }
+                        }
                       }
-                    }
-                  }
-                }
-              }
-            }
-              `}
-              render={data => (
-                <div className="projects-wrapper">
-                  {data.allWordpressAcfProjects.edges.map((project, index) => (
-                      <ProjectCard
-                        key={`${index}1234`}
-                        title={project.node.acf.project_title}
-                        description={project.node.acf.project_description}
-                        github_link={project.node.acf.github_link}
-                        live_demo_url={project.node.acf.live_demo_url}
-                        media={project.node.acf.project_image.localFile.childImageSharp.fixed.src}
-                        index={index}
-                      />
-                    ))}
+                        `}
+                        render={data => (
+                          <div className="projects-wrapper">
+                            {data.allWordpressAcfProjects.edges.map((project, index) => (
+                                <ProjectCard
+                                  key={`${index}1234`}
+                                  title={project.node.acf.project_title}
+                                  description={project.node.acf.project_description}
+                                  github_link={project.node.acf.github_link}
+                                  live_demo_url={project.node.acf.live_demo_url}
+                                  media={project.node.acf.project_image.localFile.childImageSharp.fixed.src}
+                                  index={index}
+                                />
+                              ))}
+                          </div>
+                        )} />
+                  </div>
                 </div>
-              )} />
-        </div>
-      </div>
+              </section>
+            </div>
+          </div>
   );
 };
 
