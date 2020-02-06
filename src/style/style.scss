@@ -12,11 +12,17 @@ body {
 }
 
 h1,h2,h3,h4,h5 {
-  font-family: 'Neuton', Helvetica, sans-serif;
+  font-family: 'Montserrat', Helvetica, sans-serif;
 }
 
 p {
   margin-bottom: 1rem;
+}
+
+p.lead {
+  font-family: 'Montserrat';
+  font-weight: 300;
+  font-size: 1.2rem;
 }
 
 main a {
@@ -204,7 +210,7 @@ footer {
 .hero,
 .hero.is-medium {
   background-color: transparent;
-  background-image: linear-gradient(rgba(53, 57, 65, .1),rgba(53, 57, 65, .1)),
+  background-image: linear-gradient(rgba(53, 57, 65, .6),rgba(53, 57, 65, .1)),
   url(../images/lakeMI-sm.jpg);
   background-size: cover;
   min-height: 90vh;
@@ -226,10 +232,27 @@ footer {
         padding: 3rem .5rem 0 .5rem;
       }
       
-      .action-buttons button.button {
-        background-color: #2563ff;
-        color: #fff;
-        margin: 0 .5rem 2rem 0rem;
+      .action-buttons {
+        margin: 100px 0;
+      
+        button.button {
+          background-color: transparent;
+          border-color: #fff;
+          font-family: 'Montserrat', Helvetica, sans-serif;
+          color: #fff;
+          margin: 0 .5rem 2rem 0rem;
+          letter-spacing: 1px;
+          padding-bottom: calc(0.5em - 1px);
+          padding-left: 2em;
+          padding-right: 2em;
+          padding-top: calc(0.5em - 1px);
+
+          &:hover {
+            color: #040c2c;
+            border-color: #040c2c;
+            transition: all 150ms ease-in;
+          }
+        }
       }
       
       .hero-avatar-wrap {
@@ -264,7 +287,12 @@ h2.site-title {
 .text-orange {
   color: #ff3300;
 }
-
+.text-white {
+  color: #fff;
+}
+.text-d-blue {
+  color: #040c2c;
+}
 .center-vertically {
   display: flex;
   justify-content: center;
@@ -288,13 +316,23 @@ h2.site-title {
 }
 
 .text-blue {
-  color: #2563ff;
+  color: #040c2c;
+}
+
+.is-fixed-top {
+  .navbar {
+    .navbar-item {
+        color: #040c2c;
+    }
+  }
 }
 
 .navbar { 
   .navbar-item {
-    font-family: 'Neuton', Helvetica, sans-serif;
-    font-size: 1.3rem;
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1rem;
     letter-spacing: 1px;
   }
 }

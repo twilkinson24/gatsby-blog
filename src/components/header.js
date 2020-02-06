@@ -125,8 +125,10 @@ class Header extends Component {
                   
                     <section className="section">
                       <div className="columns">
-                        <div className="column text-center">
-                           <Typer heading={'I am a'} dataText={["Web Developer","Photographer","UI/UX Designer", "Freelancer"]} />
+                        <div className="column has-text-centered banner-content">
+                          <p className="lead text-white">Hey</p>
+                          <h2 className="title is-2 text-d-blue">I'm Taylor</h2>
+                           <Typer heading={"I'm a"} dataText={["Web Developer","WordPress Developer", "Front-End Developer", "Freelancer"]} />
                           <div className="action-buttons">
                             <button className="button">Projects</button>
                             <button className="button">Contact</button>

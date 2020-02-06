@@ -51,10 +51,10 @@ class Typer extends Component {
   
     render() {    
       return (
-        <h4>{ this.props.heading }&nbsp;
+        <h3 className="title is-3 text-white">{ this.props.heading }&nbsp;
           <span>{ this.state.text }</span>
           <span id="cursor"/>
-        </h4>
+        </h3>
       );
       
     }

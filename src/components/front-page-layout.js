@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import Header from "./header";
+import AboutMe from "./about-me";
 import Footer from "./footer";
 import Projects from "../templates/projects";
 import "../style/style.scss";
@@ -13,6 +14,7 @@ const FrontPageLayout = ({ children }) => (
   <>
     <Header />
       <main>
+        <AboutMe />
         <div className="gray-bg">
           <div className="container">
             <section className="section">
