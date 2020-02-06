@@ -7,7 +7,7 @@ const AboutMe = () => (
                 <div className="columns">
                     <div className="column">
                         <div className="about-me-text">
-                            <h3 className="text-orange">About Me</h3>
+                            <h3 className="title is-3 text-orange">About Me</h3>
                             <h4>WordPress Developer | Front-End Developer</h4>
                             <p>A life-long learner from the great state of Michigan,
                                 I discovered a passion for web development and haven’t looked back since!
