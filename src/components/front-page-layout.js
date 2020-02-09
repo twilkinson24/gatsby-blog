@@ -6,6 +6,8 @@ import AboutMe from "./about-me"
 import Services from './services'
 import Testimonial from './testimonial'
 import Projects from "../templates/projects"
+import ContactForm from "./contact-form"
+
 import Footer from "./footer"
 import "../style/style.scss"
 
@@ -15,9 +17,6 @@ const FrontPageLayout = ({ children }) => (
     <Header />
       <main>
         <AboutMe />
-        <Services />
-        <Projects />   
-        <Testimonial />
         <div className="gray-bg">
           <div className="container">
             <section className="section">
@@ -27,7 +26,11 @@ const FrontPageLayout = ({ children }) => (
             </section>
           </div>
         </div>
+        <Services />
+        <Projects />   
+        <Testimonial />
       </main>
+      <ContactForm />
     <Footer />
   </>
 );

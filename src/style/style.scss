@@ -17,9 +17,9 @@ h1,h2,h3,h4,h5 {
 }
 
 section.section {
-  padding: 6rem 1.5rem 0;
+  padding: 5rem 1.5rem;
   @media only screen and (min-width: 1300px) {
-    padding: 6rem 6rem 0 6rem;
+    padding: 6rem;
   }
 }
 
@@ -429,7 +429,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   .about-me-img {
     text-align: right;
     img {
-      max-width: 300px;
+      max-width: 350px;
     }
   }
 }
