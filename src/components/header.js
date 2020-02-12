@@ -235,8 +235,7 @@ class Header extends Component {
                               <h2 className="title is-2 text-d-blue">I'm Taylor</h2>
                               <Typer heading={"I'm a"} dataText={["Web Developer","WordPress Developer", "Front-End Developer", "Freelancer"]} />
                               <div className="action-buttons cta-buttons">
-                                <button className="button">About</button>
-                                <p>instead of about put down arrow</p>
+                                <a href="#about-me" className="button button--ujarak hover-trans bg-dark-blue">About</a>
                               </div>
                             </div>
                           </div>

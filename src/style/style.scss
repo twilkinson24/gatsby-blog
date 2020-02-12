@@ -18,11 +18,13 @@ h1,h2,h3,h4,h5 {
 
 section.section {
   padding: 5rem 1.5rem;
-  @media only screen and (min-width: 1300px) {
+}
+@media only screen and (min-width: 1300px) {
+  #about-me,
+  .section.services {
     padding: 6rem;
   }
 }
-
 p {
   margin-bottom: 1rem;
 }
@@ -284,26 +286,8 @@ footer {
       }
       
       .action-buttons {
-        margin: 100px 0;
-     /* 
-        button.button {
-          background-color: transparent;
-          border-color: #fff;
-          font-family: 'Montserrat', Helvetica, sans-serif;
-          color: #fff;
-          margin: 0 .5rem 2rem 0rem;
-          letter-spacing: 1px;
-          padding-bottom: calc(0.5em - 1px);
-          padding-left: 2em;
-          padding-right: 2em;
-          padding-top: calc(0.5em - 1px);
-
-          &:hover {
-            color: $dark-blue;
-            border-color: $dark-blue;
-            transition: all 150ms ease-in;
-          }
-        } */
+        margin: 40px 0;
+     
       }
       
       .hero-avatar-wrap {
@@ -368,7 +352,11 @@ h2.site-title {
   transition: all 150ms ease-out;
 
   .navbar-item {
-    color: #fff;
+    color: $dark-blue;
+    &:hover {
+      color: #fff;
+      transition: all 150ms ease-out;
+    }
   }
 }
 
@@ -389,7 +377,19 @@ h2.site-title {
 
         &:hover {
           color: #ff3300;
+          transition: all 150ms ease-out;
         }
+    }
+  }
+  .navbar.not-homepage {
+    background-image: linear-gradient(rgba(179, 175, 175, 0.8), rgba(212, 209, 209, 0.7)),
+    url(../images/lake-michigan-dunes.jpg);
+    .navbar-item {
+      color: #fff;
+      &:hover {
+        color: $dark-blue;
+        transition: all 150ms ease-out;
+      }
     }
   }
 }
@@ -467,7 +467,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 }
 
 .cta-buttons {
-  button.button {
+  a.button {
     color: #fff;
     font-size: 1.1rem;
     font-family: 'Montserrat', Helvetica, sans-serif;
@@ -478,29 +478,24 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
     background-color: transparent;
     border: 2px solid;
   }
-  button.button.bg-dark-blue {
+  a.button.bg-dark-blue {
     background-color: $dark-blue;
     border-color: $dark-blue;
     color: #fff;
   }
-  button.button.blue-bg-trans {
+  a.button.blue-bg-trans {
     border-color: $dark-blue;
     color: $dark-blue;
 
     &:hover {
-      background-color: $dark-blue;
-      border-color: $dark-blue;
       color: #fff;
-      transition: all 50ms ease-out;
+      transition: color 150ms ease-out;
     } 
   }
 
-
   .button {
-    float: left;
     min-width: 150px;
     max-width: 250px;
-    display: block;
     padding: 1em 2em;
     border: none;
     background: none;
@@ -533,11 +528,9 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
     -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
     transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
   }
-  .button--ujarak.button--round-s::before {
-    border-radius: 2px;
-  }
+
   .button--ujarak.button--inverted::before {
-    background: #7986CB;
+    background: #fff;
   }
   .button--ujarak,
   .button--ujarak::before {
@@ -545,15 +538,34 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
     transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
   }
   .button--ujarak:hover {
-    color: #fff;
+    color: $dark-blue;
     border-color: #37474f;
   }
   .button--ujarak.button--inverted:hover {
     color: $dark-blue;
+    background-color: $dark-blue;
     border-color: $dark-blue;
   }
-  .button--ujarak:hover::before {
+  .button--ujarak.button--inverted:hover::before {
     background-color: #fff;
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  .button--ujarak:hover::before {
+    background-color: $dark-blue;
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  .button--ujarak.hover-trans:hover {
+    color: $dark-blue;
+    background-color: transparent;
+    border-color: $dark-blue;
+  }
+  .button--ujarak.hover-trans:hover::before {
+    background-color: rgba(255, 255, 255, .1);
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);

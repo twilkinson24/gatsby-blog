@@ -30,7 +30,6 @@ const FrontPageLayout = ({ children }) => (
         <Projects />   
         <Testimonial />
       </main>
-      <ContactForm />
     <Footer />
   </>
 );
