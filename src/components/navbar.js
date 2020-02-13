@@ -34,7 +34,7 @@ class Navbar extends Component {
                           className="navbar-item"
                           title="Gatsby Starter WordPress Community"
                         >   
-                          <img src={logo} className="logo-main" alt="TW logo for Taylor Wilkinson" />
+                          <img src={logoSticky} className="logo-main" alt="TW logo for Taylor Wilkinson" />
                           <img src={logoSticky} className="logo-sticky" alt="TW logo for Taylor Wilkinson" />
                           
                         </Link>

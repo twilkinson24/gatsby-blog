@@ -22,19 +22,20 @@ class ProjectCard extends Component {
   render() {
   return (
     <div
-      className={`column post-card is-one-third-desktop is-full-mobile`}
+      className={`column post-card project-card is-one-third-desktop is-full-mobile`}
     >
       <BackgroundImage src={this.state.imageSrc} onClick={() => this.setState({ isModalOpen: false})}/>
-      <div className="post-excerpt">
+      <div className="post-excerpt" onClick={() => this.setState({ isModalOpen: true})}>
         <p className="title">
-        <span className="modal-link"
-            dangerouslySetInnerHTML={{ __html: this.state.projectData.title }}
-            onClick={() => this.setState({ isModalOpen: true})}
-          />
+          <span className="modal-link"
+              dangerouslySetInnerHTML={{ __html: this.state.projectData.title }}
+            />
         </p>
 
 
-        <div className={`modal ${this.state.isModalOpen ? 'is-active' : ''}`}>
+  
+      </div>
+      <div className={`modal ${this.state.isModalOpen ? 'is-active' : ''}`}>
           <div className="modal-background"></div>
           <div className="modal-card">
             <header className="modal-card-head">
@@ -56,9 +57,6 @@ class ProjectCard extends Component {
             </footer>
           </div>
         </div>
-
-
-      </div>
     </div>
   );
   }

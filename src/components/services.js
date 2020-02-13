@@ -1,7 +1,7 @@
 import React from "react";
 
 const Services = () => (
-    <div className="services-wrap">
+  <div className="services-wrap">
     <div className="container">
       <section className="section services">
         <h3 className="title is-3 has-text-centered text-orange">What I Do</h3>

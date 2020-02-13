@@ -17,7 +17,7 @@ const FrontPageLayout = ({ children }) => (
     <Header />
       <main>
         <AboutMe />
-        <div className="gray-bg">
+        <div className="white-bg">
           <div className="container">
             <section className="section">
             <h3 className="title is-3 text-orange has-text-centered">Recent Blog Posts</h3>

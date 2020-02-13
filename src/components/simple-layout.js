@@ -9,7 +9,7 @@ import "../style/style.scss";
 const SimpleLayout = ({ children }) => (
   <>
     <Navbar />
-      <section className="section">
+      <section className="section white-bg">
         <main className="container">{children}</main>
       </section>
     <Footer />

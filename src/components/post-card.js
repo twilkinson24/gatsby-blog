@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "gatsby";
+import { Link, navigate } from "gatsby";
 import BackgroundImage from "./background-image.js";
 
 const PostCard = props => {
@@ -16,12 +16,13 @@ const PostCard = props => {
       <BackgroundImage src={imageSrc} index={index}>
         <Link to={`/blog/${props.slug}`} />
       </BackgroundImage>
-      <div className="post-excerpt">
+      <div className="post-excerpt" onClick={() => navigate(`/blog/${props.slug}`)}>
         <p className="title">
-          <Link
+          <Link to={`/blog/${props.slug}`}>
+          <span
             dangerouslySetInnerHTML={{ __html: props.title }}
-            to={`/blog/${props.slug}`}
           />
+          </Link>
         </p>
         <div className={props.excerpt === 'hide' ? 'display-none' : 'excerpt'}>
           <div className="content">
