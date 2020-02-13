@@ -9,7 +9,9 @@ import Carousel from 'nuka-carousel';
                     <div className="card">
                         <div className="testimonial-content">
                             <h4>Rani Alfers</h4>
-                            <p>Lorem ipsum dolor amet next level beard brooklyn, venmo YOLO godard pabst messenger bag vexillologist. Iceland shabby chic enamel pin leggings cardigan kogi keytar quinoa four dollar toast YOLO fashion axe put a bird on it polaroid franzen. Ethical lo-fi heirloom unicorn sartorial biodiesel adaptogen humblebrag. Lyft authentic fanny pack plaid, try-hard occupy sustainable vice squid readymade beard edison bulb.</p>
+                            <p>
+                                <em>Taylor is incredible. He is so easy to work with and is able to translate my thoughts/ handwritten notes into a website. His communication is out of this world- fantastic! I highly recommend Taylor.</em>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -18,18 +20,10 @@ import Carousel from 'nuka-carousel';
                 <div className="card-wrap">
                     <div className="card">
                         <div className="testimonial-content">
-                            <h4>Rani Alfers</h4>
-                            <p>Lorem ipsum dolor amet next level beard brooklyn, venmo YOLO godard pabst messenger bag vexillologist. Iceland shabby chic enamel pin leggings cardigan kogi keytar quinoa four dollar toast YOLO fashion axe put a bird on it polaroid franzen. Ethical lo-fi heirloom unicorn sartorial biodiesel adaptogen humblebrag. Lyft authentic fanny pack plaid, try-hard occupy sustainable vice squid readymade beard edison bulb.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="testimonial-slide">
-                <div className="card-wrap">
-                    <div className="card">
-                        <div className="testimonial-content">
-                            <h4>Rani Alfers</h4>
-                            <p>Lorem ipsum dolor amet next level beard brooklyn, venmo YOLO godard pabst messenger bag vexillologist. Iceland shabby chic enamel pin leggings cardigan kogi keytar quinoa four dollar toast YOLO fashion axe put a bird on it polaroid franzen. Ethical lo-fi heirloom unicorn sartorial biodiesel adaptogen humblebrag. Lyft authentic fanny pack plaid, try-hard occupy sustainable vice squid readymade beard edison bulb.</p>
+                            <h4>Eric Jordan</h4>
+                            <p>
+                                <em>Taylor is consistent, reliable, quick, knowledgeable and respectful. Our work together is always easy with great results.</em>         
+                            </p>
                         </div>
                     </div>
                 </div>

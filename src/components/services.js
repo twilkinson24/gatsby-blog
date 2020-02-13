@@ -27,6 +27,7 @@ const Services = () => (
                 <li>WordPress Site Optimization</li>
                 <li>Landing Pages</li>
               </ul>
+              <p><a href="#">Tool I use to build websites</a></p>
             </div>
         </div>
       </section>
