@@ -160,6 +160,7 @@ module.exports = {
         ],
       },
     },
+    'gatsby-plugin-page-transitions',
     `gatsby-plugin-scroll-reveal`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

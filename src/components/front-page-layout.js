@@ -7,13 +7,15 @@ import Services from './services'
 import Testimonial from './testimonial'
 import Projects from "../templates/projects"
 import ContactForm from "./contact-form"
+import PageTransition from 'gatsby-plugin-page-transitions';
+
 
 import Footer from "./footer"
 import "../style/style.scss"
 
 
 const FrontPageLayout = ({ children }) => (
-  <>
+  <PageTransition>
     <Header />
       <main>
         <AboutMe />
@@ -31,7 +33,7 @@ const FrontPageLayout = ({ children }) => (
         <Testimonial />
       </main>
     <Footer />
-  </>
+  </PageTransition>
 );
 
 FrontPageLayout.propTypes = {
