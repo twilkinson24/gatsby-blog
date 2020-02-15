@@ -7,7 +7,7 @@ const Testimonial = () => {
   return(
       <section id="testimonial">
         <Parallax bgImage={dunesBGImg} strength={500} className="testimonial_area">
-            <div className="testimonial_area">
+            <div className="testimonial-area">
                 <div className="container">
                     <div className="columns">
                         <TestimonialSlider />
