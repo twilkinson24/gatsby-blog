@@ -26,6 +26,12 @@ console.log(data)
             <section className="section">
                 <h3 className="title is-3 has-text-centered text-orange">Some Recent Projects</h3>
                 <p className="has-text-centered"><span className="bottom-line"></span></p>
+                <p className="has-text-centered">
+                  <a href="#">Contact me</a> with any questions, or if you'd like to see more samples of my work.
+                </p>
+                <p className="has-text-centered">
+                  Interested in working together? <a href="#">Let me know!</a>
+                </p>
                 <div className="projects-wrap">
                   <div className="columns is-multiline is-mobile blog-list">
                     <StaticQuery query={graphql`{
@@ -58,7 +64,7 @@ console.log(data)
                       }
                         `}
                         render={data => (
-                          <div className="projects-wrapper">
+                          <div className="projects-wrapper columns">
                             {data.allWordpressAcfProjects.edges.map((project, index) => (
                                 <ProjectCard
                                   key={`${index}1234`}

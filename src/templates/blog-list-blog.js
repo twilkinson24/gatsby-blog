@@ -50,7 +50,7 @@ const BlogIndex = props => {
   return (
     <SimpleLayout>
       <SEO title={siteTitle} keywords={[`gatsby`, `blog`, `wordpress`]} />
-      <div className="columns is-multiline is-mobile blog-list">
+      <div className="columns is-multiline is-desktop is-mobile blog-list">
         {posts.map((post, index) => (
           <PostCard
             key={post.node.wordpress_id}

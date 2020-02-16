@@ -8,27 +8,50 @@ const Services = () => (
         <p className="has-text-centered"><span className="bottom-line"></span></p>
       
         <div className="columns">
-          <div className="column is-6 is-mobile">
-              <p>
-                <strong>What I love to do</strong> is find practical solutions and collaborate quality people.
-              </p>
-              <p>WordPress is generally my tool of choice, but no two projects are the same. Building modern, elegant and accessible websites that provide value for my clients is <em>always the goal.</em></p>
-              <p><a href="#">More about me and the web dev tools I use</a></p>
-            </div>
-            <div className="column is-6 is-mobile">
-              <p><strong>Recent projects have involved:</strong></p>
-              <ul className="list-style-circle">
-                <li>PSD to WordPress</li>
-                <ul>
-                  <li>Custom-coded Theme Development</li>
-                  <li>Divi &amp; Elementor Development</li>
+          <div className="column is-10 is-mobile" style={{ margin: '0 auto', textAlign: 'center' }}>
+            <p>
+              <strong>I love to build quality websites</strong> for and alongside quality people.
+            </p>
+            <p>WordPress is generally my tool of choice, but no two projects are the same. I strive to build modern, elegant and accessible websites that help my clients be successful.</p>
+          </div>
+        </div>
+        <div className="columns">
+          <div className="column is-10 is-mobile" style={{ margin: '0 auto'}}>
+            <div className="columns">
+              <div className="column is-6 is-mobile">
+                <p><strong>Recent projects have involved:</strong></p>
+                <ul className="list-style-circle">
+                  <li>PSD to WordPress</li>
+                  <li>Headless WordPress With Gatsby.js</li>
+                  <li>WordPress Edits and Redesigns</li>
+                  <li>WooCommerce implementation</li>
+                  <li>Landing Pages</li>
                 </ul>
-                <li>Headless WordPress With Gatsby.js</li>
-                <li>WordPress Site Optimization</li>
-                <li>Landing Pages</li>
-              </ul>
-              <p><a href="#">Tool I use to build websites</a></p>
+              </div>
+              <div className="column is-6 is-mobile">
+                <p><strong>WordPress favorites:</strong></p>
+                <ul className="list-style-none">
+                  <li style={{display: 'flex'}}>
+                    <span style={{ display: 'block', width: '170px' }}><em>Theme:</em></span>
+                    <span style={{ display: 'block' }}>Genesis by StudioPress</span>
+                  </li>
+                  <li style={{display: 'flex'}}>
+                    <span style={{ display: 'block', width: '170px' }}><em>Page Builder:</em></span>
+                    <span style={{display: 'block'}}>Divi by Elegant Themes</span>
+                  </li>
+                  <li style={{display: 'flex'}}>
+                    <span style={{ display: 'block', width: '170px' }}><em>Hosting Company:</em></span>
+                    <span style={{display: 'block'}}>Flywheel</span>
+                  </li>
+                  <li style={{display: 'flex'}}>
+                    <span style={{ display: 'block', width: '170px' }}><em>Type of gig:</em></span>
+                    <span style={{display: 'block'}}>PSD to Code / Anything challenging</span>
+                  </li>
+                </ul>
+              </div>
             </div>
+            <p className="has-text-centered"><a href="#">More about me and the web dev tools I use</a></p>
+          </div>
         </div>
       </section>
     </div>

@@ -11,7 +11,7 @@ import PageTransition from 'gatsby-plugin-page-transitions';
 const SimpleLayout = ({ children }) => (
   <PageTransition>
     <Navbar />
-      <section className="section white-bg">
+      <section className="section page">
         <main className="container">{children}</main>
       </section>
     <Footer />

@@ -6,10 +6,8 @@ import Typer from '../components/typer'
 
 import logo from "../images/logo-trans-bg.png"
 import logoSticky from "../images/logo-orange-trans-bg.png"
-import heroBG from './../images/lakeMI-sm.jpg'
 import bubble from './../images/bubble2.png'
 import Particles from 'react-particles-js';
-
 
 class Header extends Component {
 
@@ -244,7 +242,6 @@ class Header extends Component {
                     </div>
                   </div>
               </section>
-
           );
         }}
       />

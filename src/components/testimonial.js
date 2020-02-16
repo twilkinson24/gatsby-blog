@@ -6,7 +6,7 @@ import TestimonialSlider from './testimonial-slider';
 const Testimonial = () => {
   return(
       <section id="testimonial">
-        <Parallax bgImage={dunesBGImg} strength={500} className="testimonial_area">
+        <Parallax bgImage={dunesBGImg} strength={500} className="testimonial-area-wrap">
             <div className="testimonial-area">
                 <div className="container">
                     <div className="columns">

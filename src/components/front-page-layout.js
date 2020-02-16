@@ -10,6 +10,7 @@ import ContactForm from "./contact-form"
 import PageTransition from 'gatsby-plugin-page-transitions';
 
 
+
 import Footer from "./footer"
 import "../style/style.scss"
 
@@ -29,7 +30,7 @@ const FrontPageLayout = ({ children }) => (
           </div>
         </div>
         <Services />
-        <Projects />   
+        <Projects />
         <Testimonial />
       </main>
     <Footer />

@@ -18,7 +18,7 @@ const AboutMe = () => (
                                 people to build web sites and web applications.
                             </p>
                             <p>
-                                If you're interested, I invite you to learn about the <a href="#">tools I use to build websites</a> or the <a href="#">services I offer</a>.
+                                If you're interested, I invite you to learn more about the <a href="#">tools I use to build websites</a> or the <a href="#">services I offer</a>.
                             </p>
                             <p>
                                 <em>

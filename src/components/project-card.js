@@ -22,7 +22,7 @@ class ProjectCard extends Component {
   render() {
   return (
     <div
-      className={`column post-card project-card is-one-third-desktop is-full-mobile`}
+      className={`column project-card post-card`}
     >
       <BackgroundImage src={this.state.imageSrc} onClick={() => this.setState({ isModalOpen: false})}/>
       <div className="post-excerpt" onClick={() => this.setState({ isModalOpen: true})}>
