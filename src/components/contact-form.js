@@ -14,8 +14,9 @@ const ContactForm = () => (
                 <img src={CartoonAvatar} className="is-hidden-mobile" alt="Cartoon avatar of Taylor Wilkinson" />
             </div>
                 <div className="column is-6 is-mobile">
-                    <form action="POST" data-netlify="true" name="general-contact" id="general-contact">
+                    <form action="POST" netlify-honeypot="bot-field" data-netlify="true" name="general-contact" id="general-contact">
                         <div className="fields">
+                            <input type="hidden" name="bot-field" />
                             <div className="field">
                                 <label className="label" htmlFor="name">Name: </label>
                                 <div className="control">
