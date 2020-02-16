@@ -14,7 +14,7 @@ const ContactForm = () => (
                 <img src={CartoonAvatar} className="is-hidden-mobile" alt="Cartoon avatar of Taylor Wilkinson" />
             </div>
                 <div className="column is-6 is-mobile">
-                    <form action="POST" data-netlify="true">
+                    <form action="POST" data-netlify="true" id="general-contact">
                         <div className="fields">
                             <div className="field">
                                 <label className="label" htmlFor="name">Name: </label>
@@ -34,7 +34,7 @@ const ContactForm = () => (
                             <div className="field">
                                 <label className="label" htmlFor="message">Message</label>
                                 <div className="control">
-                                    <textarea className="textarea" name="message" id="message" placeholder="Textarea"></textarea>
+                                    <textarea className="textarea" name="message" id="message" placeholder="Hi there!"></textarea>
                                 </div>
                             </div>
                             <div className="field">
