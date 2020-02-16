@@ -1,8 +1,11 @@
-import React from 'react';
+import React from "react";
 
-import CartoonAvatar from '../images/TaylorAvatar-cartoon-sm.png'
+import SimpleLayout from "../components/simple-layout";
+import SEO from "../components/seo";
 
-const ContactForm = () => (
+
+const WorkTogetherContactForm = () => (
+  <SimpleLayout>
     <div className="container">
         <section className="section" id="contact-form">
             <div className="columns">
@@ -32,6 +35,7 @@ const ContactForm = () => (
                                         <i className="fas fa-exclamation-triangle"></i>
                                     </span>
                                 </div>
+                                <p className="help is-danger">This email is invalid</p>
                             </div>
                             <div className="field">
                                 <label className="label">Message</label>
@@ -53,6 +57,7 @@ const ContactForm = () => (
             </div>
         </section>
     </div>
+  </SimpleLayout>
 );
 
-  export default ContactForm;
+  export default WorkTogetherContactForm;
