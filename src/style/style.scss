@@ -406,12 +406,13 @@ h2.site-title {
   background-position: center;
   background-size: cover;
   transition: all 150ms ease-out;
-
-  .navbar-item {
-    color: $dark-blue;
-    &:hover {
-      color: #ff3300;
-      transition: all 150ms ease-out;
+  .navbar-menu {
+    .navbar-item {
+      color: $dark-blue;
+      &:hover {
+        color: #ff3300;
+        transition: all 150ms ease-out;
+      }
     }
   }
 }
@@ -449,11 +450,13 @@ h2.site-title {
   }
   .navbar.not-homepage {
     background-image: none;
-    .navbar-item {
-      color: $dark-blue;
-      &:hover {
-        color: #ff3300;
-        transition: all 150ms ease-out;
+    .navbar-menu {
+      .navbar-item {
+        color: $dark-blue !important;
+        &:hover {
+          color: #ff3300;
+          transition: all 150ms ease-out;
+        }
       }
     }
   }
