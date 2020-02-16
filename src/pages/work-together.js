@@ -18,7 +18,7 @@ const WorkTogetherContactForm = () => (
                 <p><strong>I look forward to hearing from you!</strong></p>
             </div>
                 <div className="column is-6 is-mobile">
-                    <form action="POST" data-netlify="true" data-netlify-honeypot="bot-field" id="work-together-form">
+                    <form action="POST" data-netlify="true" data-netlify-honeypot="bot-field" name="work-together-form" id="work-together-form">
                         <div className="fields">
                             <input type="hidden" name="bot-field" />
                             <input type="hidden" name="form-name" value="contact" />
