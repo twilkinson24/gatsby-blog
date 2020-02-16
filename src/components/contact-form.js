@@ -17,6 +17,7 @@ const ContactForm = () => (
                     <form action="POST" netlify-honeypot="bot-field" data-netlify="true" name="general-contact" id="general-contact">
                         <div className="fields">
                             <input type="hidden" name="bot-field" />
+                            <input type="hidden" name="general-contact" value="contact" />
                             <div className="field">
                                 <label className="label" htmlFor="name">Name: </label>
                                 <div className="control">

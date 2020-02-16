@@ -21,6 +21,7 @@ const WorkTogetherContactForm = () => (
                     <form action="POST" netlify-honeypot="bot-field" data-netlify="true" name="work-together-form" id="work-together-form">
                         <div className="fields">
                             <input type="hidden" name="bot-field" />
+                            <input type="hidden" name="work-together-form" value="contact" />
                             <div className="field">
                                 <label className="label" htmlFor="work-together-name">Name: </label>
                                 <div className="control">
