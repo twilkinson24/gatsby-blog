@@ -156,6 +156,22 @@ article {
   color: rgba(255, 255, 255, .5);
   cursor: pointer;
 }
+.slider-control-centerright {
+  @media only screen and (max-width: 1023px) {
+    right: 15px !important;
+  }
+  @media only screen and (max-width: 500px) {
+    right: 5px !important;
+  }
+}
+.slider-control-centerleft {
+  @media only screen and (max-width: 1023px) {
+    left: 15px !important;
+  }
+  @media only screen and (max-width: 500px) {
+    left: 5px !important;
+  }
+}
 
 .columns.blog-list {
   justify-content: center;
@@ -401,16 +417,22 @@ h2.site-title {
 }
 
 .navbar { 
-  .navbar-item {
-    font-family: 'Montserrat', Helvetica, sans-serif;
-    font-size: 1rem;
-    font-weight: 500;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-
+  .navbar-menu {
     @media only screen and (max-width: 1023px) {
-      color: $dark-blue;
+      background-color: #fff;
+      background-color: rgba(255, 255, 255, .45);
+    }
+    .navbar-item {
+      font-family: 'Montserrat', Helvetica, sans-serif;
+      font-size: 1rem;
+      font-weight: 500;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+
+      @media only screen and (max-width: 1023px) {
+        color: $dark-blue;
+      }
     }
   }
 }
