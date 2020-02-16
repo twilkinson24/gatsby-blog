@@ -50,7 +50,7 @@ const Services = () => (
                 </ul>
               </div>
             </div>
-            <p className="has-text-centered has-text-left-mobile"><a href="#">More about me and the web dev tools I use</a></p>
+            <p className="has-text-centered has-text-left-mobile"><a href="https://google.com">More about me and the web dev tools I use</a></p>
           </div>
         </div>
       </section>
