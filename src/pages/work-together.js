@@ -10,37 +10,58 @@ const WorkTogetherContactForm = () => (
         <section className="section" id="contact-form">
             <div className="columns">
             <div className="column is-6 is-mobile" style={{ margin: '0 auto'}}>
-                <h3 className="title is-3 text-orange">Say Hi!</h3>
+                <h3 className="title is-3 text-orange">Let's work together!</h3>
                 <p><span className="bottom-line"></span></p>
-                <p>Want to work together? Please fill out this form.</p>
-                <img src={CartoonAvatar} className="is-hidden-mobile" alt="Cartoon avatar of Taylor Wilkinson" />
+                <p>Have a project in mind? Interested in working together?</p>
+                <p>Please fill out the form. I'll respond to your message as quickly as I can.</p>
+                <p>Please include as much information about your project as possible, such as a potential start date and <em>your vision for the project.</em></p>
+                <p>I look forward to hearing from you!</p>
             </div>
                 <div className="column is-6 is-mobile">
-                    <form action="POST" data-netlify="true">
+                    <form action="POST" data-netlify="true" id="work-together-form">
                         <div className="fields">
                             <div className="field">
-                                <label className="label">Name: </label>
+                                <label className="label" htmlFor="work-together-name">Name: </label>
                                 <div className="control">
-                                    <input class="input" type="text" name="name" placeholder="Bob Ross" />
+                                    <input class="input" type="text" name="work-together-name" id="work-together-name" placeholder="Bob Ross" />
                                 </div>
                             </div>
                             <div class="field">
-                                <label className="label">Email</label>
+                                <label className="label" htmlFor="work-together-email">Email</label>
                                 <div className="control has-icons-left has-icons-right">
-                                    <input className="input" type="email" name="email" placeholder="bobross@gmail.com" />
+                                    <input className="input" type="email" name="work-together-email" id="work-together-email" placeholder="bobross@gmail.com" />
                                     <span className="icon is-small is-left">
                                         <i className="fas fa-envelope"></i>
                                     </span>
-                                    <span className="icon is-small is-right">
-                                        <i className="fas fa-exclamation-triangle"></i>
-                                    </span>
                                 </div>
-                                <p className="help is-danger">This email is invalid</p>
+                            </div>
+                            <div class="control">
+                                <label className="label" htmlFor="type-of-job">What category does this job fall under?</label>
+                                <div class="select">
+                                    <select id="type-of-job" name="type-of-job">
+                                        <option>Long-term Contract</option>
+                                        <option>New Site Build</option>
+                                        <option>Edits to an Existing Website</option>
+                                        <option>Landing Page/s</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <label className="label" htmlFor="budget">Approximate Budget (if applicable)</label>
+                                <div class="select">
+                                    <select id="budget" name="budet">
+                                        <option>$2,000+</option>
+                                        <option>$1,000+</option>
+                                        <option>$500+</option>
+                                        <option>less than $500</option>
+                                    </select>
+                                </div>
                             </div>
                             <div className="field">
-                                <label className="label">Message</label>
+                                <label className="label" htmlFor="work-together-message">Additional Details</label>
                                 <div className="control">
-                                    <textarea className="textarea" name="message" placeholder="Textarea"></textarea>
+                                    <textarea className="textarea" name="work-together-message" id="work-together-message" placeholder="Textarea"></textarea>
                                 </div>
                             </div>
                             <div className="field">
