@@ -24,7 +24,7 @@ const ContactForm = () => (
                             <div class="field">
                                 <label className="label">Email</label>
                                 <div className="control has-icons-left has-icons-right">
-                                    <input className="input is-danger" type="email" name="email" placeholder="Email input" value="taylor@gmail.com" />
+                                    <input className="input" type="email" name="email" placeholder="bobross@gmail.com" />
                                     <span className="icon is-small is-left">
                                         <i className="fas fa-envelope"></i>
                                     </span>
@@ -45,7 +45,7 @@ const ContactForm = () => (
                             </div>
                             <div class="field">
                                 <div class="control">
-                                    <button class="button is-link">Submit</button>
+                                    <input type="submit" value="Send" className="button" />
                                 </div>
                             </div>
                         </div>
