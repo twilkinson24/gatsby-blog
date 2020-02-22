@@ -105,7 +105,7 @@ class Header extends Component {
                           "enable": true,
                           "speed": 5,
                           "direction": "none",
-                          "random": false,
+                          "random": true,
                           "straight": false,
                           "out_mode": "out",
                           "bounce": false,
@@ -120,8 +120,8 @@ class Header extends Component {
                         "detect_on": "canvas",
                         "events": {
                           "onhover": {
-                            "enable": false,
-                            "mode": "grab"
+                            "enable": true,
+                            "mode": "bubble"
                           },
                           "onclick": {
                             "enable": false,
@@ -130,21 +130,21 @@ class Header extends Component {
                           "resize": false
                         },
                         "modes": {
-                          "grab": {
-                            "distance": 400,
-                            "line_linked": {
-                              "opacity": 1
-                            }
+                          "bubble": {
+                            "distance": 250,
+                            "duration": 2,
+                            "opacity": .1,
+                            "size": 1
                           },
                           "bubble": {
                             "distance": 400,
-                            "size": 40,
+                            "size": 10,
                             "duration": 2,
-                            "opacity": 8,
+                            "opacity": .4,
                             "speed": 3
                           },
                           "repulse": {
-                            "distance": 200,
+                            "distance": 400,
                             "duration": 0.4
                           },
                           "push": {
@@ -192,7 +192,7 @@ class Header extends Component {
                             <div className="navbar-end has-text-centered">
                               <Link
                                 className="navbar-item"
-                                to={`/`}
+                                to={`/#services`}
                               >
                                 Services
                               </Link>
@@ -213,7 +213,7 @@ class Header extends Component {
                               </Link>
                               <Link
                                   className="navbar-item"
-                                  to={`/contact`}
+                                  to={`/#contact-form`}
                                 >
                                 Contact
                               </Link>

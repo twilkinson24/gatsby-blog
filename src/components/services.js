@@ -1,7 +1,7 @@
 import React from "react";
 
 const Services = () => (
-  <div className="services-wrap">
+  <div className="services-wrap" id="services">
     <div className="container">
       <section className="section services">
         <h3 className="title is-3 has-text-centered text-orange">What I Do</h3>
@@ -45,8 +45,14 @@ const Services = () => (
                   </li>
                   <li className="flex">
                     <span className="favorite-label"><em>Type of job:</em></span>
-                    <span style={{display: 'block', width: '170px' }}>PSD to Code / A challenge</span>
+                    <span style={{display: 'block', width: '170px' }}>A challenge!</span>
                   </li>
+                </ul>
+                <ul>
+                  <h3>Other plugins I've worked with include:</h3>
+                  <li>BuddyPress</li>
+                  <li>WooCommerce</li>
+                  <li>Elementor</li>
                 </ul>
               </div>
             </div>

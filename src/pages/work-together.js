@@ -30,11 +30,8 @@ const WorkTogetherContactForm = () => (
                             </div>
                             <div class="field">
                                 <label className="label" htmlFor="work-together-email">Email</label>
-                                <div className="control has-icons-left has-icons-right">
+                                <div className="control">
                                     <input className="input" type="email" name="work-together-email" id="work-together-email" placeholder="bobross@gmail.com" />
-                                    <span className="icon is-small is-left">
-                                        <i className="fas fa-envelope"></i>
-                                    </span>
                                 </div>
                             </div>
                             <div class="control">

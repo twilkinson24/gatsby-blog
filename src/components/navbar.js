@@ -51,7 +51,7 @@ class Navbar extends Component {
                         <div className="navbar-end has-text-centered">
                           <Link
                             className="navbar-item"
-                            to={`/`}
+                            to={`/#services`}
                           >
                             Services
                           </Link>
@@ -64,7 +64,7 @@ class Navbar extends Component {
                           </Link>
                           <Link
                               className="navbar-item"
-                              to={`/contact`}
+                              to={`/#contact-form`}
                             >
                             Contact
                           </Link>
