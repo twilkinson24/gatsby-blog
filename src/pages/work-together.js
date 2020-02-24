@@ -14,14 +14,14 @@ const WorkTogetherContactForm = () => (
                 <p><span className="bottom-line"></span></p>
                 <p><strong>Have a project in mind? Interested in working together?</strong></p>
                 <p>Please fill out the form, and I'll respond to your message as quickly as I can.</p>
-                <p>Include as much information about your project as possible, such as a potential start date and <em>your vision for the project.</em></p>
+                <p>Include as much information about your project as possible, such as a potential start date gatand <em>your vision for the project.</em></p>
                 <p><strong>I look forward to hearing from you!</strong></p>
             </div>
                 <div className="column is-6 is-mobile">
-                    <form action="POST" netlify-honeypot="bot-field" data-netlify="true" name="work-together-form" id="work-together-form">
+                    <form method="POST" enctype="multipart/form-data" action="/thank-you" netlify-honeypot="bot-field" data-netlify="true" form-name="work-together-form" id="work-together-form">
                         <div className="fields">
                             <input type="hidden" name="bot-field" />
-                            <input type="hidden" name="work-together-form" value="contact" />
+                            <input type="hidden" name="form-name" value="contact-work-together" />
                             <div className="field">
                                 <label className="label" htmlFor="work-together-name">Name: </label>
                                 <div className="control">
@@ -62,9 +62,7 @@ const WorkTogetherContactForm = () => (
                                     <textarea className="textarea" name="work-together-message" id="work-together-message" placeholder="This is going to be awesome"></textarea>
                                 </div>
                             </div>
-                            <div className="field">
-                                <div data-netlify-recaptcha="true"></div>
-                            </div>
+                          
                             <div class="field">
                                 <div class="control">
                                     <input type="submit" value="Send" className="button" />

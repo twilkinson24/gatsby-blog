@@ -14,7 +14,7 @@ const ContactForm = () => (
                 <img src={CartoonAvatar} className="is-hidden-mobile" alt="Cartoon avatar of Taylor Wilkinson" />
             </div>
                 <div className="column is-6 is-mobile">
-                    <form action="POST" netlify-honeypot="bot-field" data-netlify="true" name="general-contact" id="general-contact">
+                    <form action="/thank-you" netlify-honeypot="bot-field" data-netlify="true" name="general-contact" id="general-contact">
                         <div className="fields">
                             <input type="hidden" name="bot-field" />
                             <input type="hidden" name="form-name" value="contact" />
@@ -41,7 +41,7 @@ const ContactForm = () => (
                             </div>
                             <div class="field">
                                 <div class="control">
-                                    <input type="submit" value="Send" className="button" />
+                                    <button type="submit" className="button">Send</button>
                                 </div>
                             </div>
                         </div>
