@@ -2,19 +2,18 @@ import React, { Component } from 'react';
 import { Link } from "gatsby";
 import { navigate } from 'gatsby-link'
 
-
 import CartoonAvatar from '../images/TaylorAvatar-cartoon-sm.png'
 
-class ContactForm extends Component {
+function encode(data) {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+      .join('&')
+  }
+
+export default class Index extends Component {
     constructor(props) {
         super(props)
         this.state = { isValidated: false }
-      }
-
-    encode(data) {
-        return Object.keys(data)
-          .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-          .join('&')
       }
     
     handleChange = e => {
@@ -27,7 +26,7 @@ class ContactForm extends Component {
         fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: this.encode({
+        body: encode({
             'form-name': form.getAttribute('name'),
             ...this.state,
         }),
@@ -98,4 +97,3 @@ class ContactForm extends Component {
         )
     }
 }
-  export default ContactForm;
