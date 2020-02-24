@@ -213,7 +213,7 @@ class Header extends Component {
                               </Link>
                               <Link
                                   className="navbar-item"
-                                  to={`/#contact-form`}
+                                  to={`#contact-form`}
                                 >
                                 Contact
                               </Link>
