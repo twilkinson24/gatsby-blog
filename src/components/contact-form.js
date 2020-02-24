@@ -55,19 +55,30 @@ class ContactForm extends Component {
                                 <div className="field">
                                     <label className="label" htmlFor="name">Name: </label>
                                     <div className="control">
-                                        <input class="input" type="text" name="name" id="name" placeholder="Bob Ross" />
+                                        <input class="input" 
+                                            type="text" 
+                                            name="name" 
+                                            id="name" 
+                                            placeholder="Bob Ross"
+                                            onChange={this.handleChange}
+                                            />
                                     </div>
                                 </div>
                                 <div class="field">
                                     <label className="label" htmlFor="email">Email</label>
                                     <div className="control">
-                                        <input className="input" type="email" name="email" id="email" placeholder="bobross@gmail.com" />
+                                        <input className="input" 
+                                            type="email" 
+                                            name="email" 
+                                            id="email" 
+                                            placeholder="bobross@gmail.com"
+                                            onChange={this.handleChange} />
                                     </div>
                                 </div>
                                 <div className="field">
                                     <label className="label" htmlFor="message">Message</label>
                                     <div className="control">
-                                        <textarea className="textarea" name="message" id="message" placeholder="Hi there!"></textarea>
+                                        <textarea className="textarea" name="message" id="message" placeholder="Hi there!" onChange={this.handleChange}></textarea>
                                     </div>
                                 </div>
                                 <div className="field">
