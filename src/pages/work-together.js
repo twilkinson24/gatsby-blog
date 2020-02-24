@@ -48,9 +48,22 @@ export default class Index extends Component {
                         <p><strong>I look forward to hearing from you!</strong></p>
                     </div>
                         <div className="column is-6 is-mobile">
-                            <form method="POST" enctype="multipart/form-data" action="/thank-you" netlify-honeypot="bot-field" data-netlify="true" form-name="work-together-form" id="work-together-form">
+                            <form 
+                                name="work-together-form"
+                                method="post"
+                                action="/thank-you"
+                                data-netlify="true"
+                                data-netlify-honeypot="bot-field"
+                                onSubmit={this.handleSubmit}
+                                id="work-together-form"
+                            >
                                 <div className="fields">
-                                    <input type="hidden" name="bot-field" />
+                                <div hidden>
+                                    <label>
+                                        Don’t fill this out:{' '}
+                                        <input name="bot-field" onChange={this.handleChange} />
+                                    </label>
+                                </div>
                                     <input type="hidden" name="form-name" value="contact-work-together" />
                                     <div className="field">
                                         <label className="label" htmlFor="work-together-name">Name: </label>
