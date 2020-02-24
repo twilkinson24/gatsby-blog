@@ -124,7 +124,7 @@ export default class Index extends Component {
                                 
                                     <div class="field">
                                         <div class="control">
-                                            <input type="submit" value="Send" className="button" />
+                                            <button type="submit" className="button">Send</button>
                                         </div>
                                     </div>
                                 </div>
