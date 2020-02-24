@@ -2,16 +2,16 @@ import React from 'react'
 import { navigate } from 'gatsby-link'
 import SimpleLayout from '../components/simple-layout'
 
-function encode(data) {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-    .join('&')
-}
-
-export default class Index extends React.Component {
+export default class TestForm extends React.Component {
   constructor(props) {
     super(props)
     this.state = { isValidated: false }
+  }
+
+  encode(data) {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+      .join('&')
   }
 
   handleChange = e => {
