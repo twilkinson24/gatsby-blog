@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { navigate } from 'gatsby-link'
 import SimpleLayout from '../components/simple-layout'
 
@@ -8,7 +8,7 @@ function encode(data) {
     .join('&')
 }
 
-export default class Index extends React.Component {
+export default class WorkTogether extends Component {
   constructor(props) {
     super(props)
     this.state = { isValidated: false }
