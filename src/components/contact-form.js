@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from "gatsby";
+import { navigate } from 'gatsby-link'
+
 
 import CartoonAvatar from '../images/TaylorAvatar-cartoon-sm.png'
 
@@ -25,7 +27,7 @@ class ContactForm extends Component {
         fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encode({
+        body: this.encode({
             'form-name': form.getAttribute('name'),
             ...this.state,
         }),

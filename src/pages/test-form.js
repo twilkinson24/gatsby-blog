@@ -24,7 +24,7 @@ export default class Index extends React.Component {
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
+      body: this.encode({
         'form-name': form.getAttribute('name'),
         ...this.state,
       }),
