@@ -2,7 +2,7 @@ import React from 'react'
 import { navigate } from 'gatsby-link'
 import SimpleLayout from '../components/simple-layout'
 
-export default class Index extends React.Component {
+export default class TestForm extends React.Component {
   constructor(props) {
     super(props)
     this.state = { isValidated: false }
