@@ -8,7 +8,7 @@ function encode(data) {
     .join('&')
 }
 
-export default class WorkTogether extends Component {
+class WorkTogether extends Component {
   constructor(props) {
     super(props)
     this.state = { isValidated: false }
@@ -124,3 +124,5 @@ export default class WorkTogether extends Component {
         )
     }
 }
+
+export default WorkTogether;
