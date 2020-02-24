@@ -6,7 +6,7 @@ import AboutMe from "./about-me"
 import Services from './services'
 import Testimonial from './testimonial'
 import Projects from "../templates/projects"
-import ContactForm from "./contact-form"
+import ContactForm from "../pages/contact-form"
 import PageTransition from 'gatsby-plugin-page-transitions';
 
 
