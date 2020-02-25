@@ -27,10 +27,10 @@ console.log(data)
                 <h3 className="title is-3 has-text-centered text-orange">Some Recent Projects</h3>
                 <p className="has-text-centered"><span className="bottom-line"></span></p>
                 <p className="has-text-centered">
-                  <a href="#">Contact me</a> with any questions, or if you'd like to see more samples of my work.
+                  <Link to="#contact-form">Contact me</Link> with any questions, or if you'd like to see more samples of my work.
                 </p>
                 <p className="has-text-centered">
-                  Interested in working together? <a href="#">Let me know!</a>
+                  Interested in working together? <Link to="/work-together">Let me know!</Link>
                 </p>
                 <div className="projects-wrap">
                   <div className="columns is-multiline is-mobile blog-list">

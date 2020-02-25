@@ -55,7 +55,12 @@ class Navbar extends Component {
                           >
                             Services
                           </Link>
-                          
+                          <Link
+                            className="navbar-item"
+                            to={`/#about-me`}
+                          >
+                            About
+                          </Link>
                           <Link
                               className="navbar-item"
                               to={`/blog`}

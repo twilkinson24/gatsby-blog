@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "gatsby";
 
 import headShot from '../images/avatar-tw.jpg'
+import scrollTo from 'gatsby-plugin-smoothscroll';
+
 
 const AboutMe = () => (
         <div className="container">
@@ -31,15 +33,15 @@ const AboutMe = () => (
                                 <Link to="/work-together" className="button button--inverted button--ujarak bg-dark-blue">
                                     Hire Me
                                 </Link>
-                                <Link to="#contact-form" className="button blue-bg-trans button button--ujarak">
+                                <a onClick={() => scrollTo('#contact-form')} className="button blue-bg-trans button button--ujarak">
                                     Say What's Up
-                                </Link>
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div className="column">
                         <div className="about-me-img">
-                            <img src={headShot} />
+                            <img src={headShot} alt="Taylor Wilkinson - Web Developer" />
                         </div>
                     </div>
                 </div>

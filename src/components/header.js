@@ -8,6 +8,7 @@ import logo from "../images/logo-trans-bg.png"
 import logoSticky from "../images/logo-orange-trans-bg.png"
 import bubble from './../images/bubble2.png'
 import Particles from 'react-particles-js';
+import scrollTo from 'gatsby-plugin-smoothscroll';
 
 class Header extends Component {
 
@@ -190,33 +191,30 @@ class Header extends Component {
                           </div>
                           <div id="navMenu" className="navbar-menu">
                             <div className="navbar-end has-text-centered">
-                              <Link
+                              <a
                                 className="navbar-item"
-                                to={`/#services`}
+                                onClick={() => scrollTo('#services')} 
                               >
                                 Services
-                              </Link>
-                              {wordpressPages.map(page => (
-                                <Link
+                              </a>
+                              <a
                                   className="navbar-item"
-                                  to={`/${page.node.slug}`}
-                                  key={page.node.wordpress_id}
+                                  onClick={() => scrollTo('#about-me')} 
                                 >
-                                  {page.node.title}
-                                </Link>
-                              ))}
+                                About
+                              </a>
                               <Link
                                   className="navbar-item"
                                   to={`/blog`}
                                 >
                                 Blog
                               </Link>
-                              <Link
+                              <a
                                   className="navbar-item"
-                                  to={`#contact-form`}
+                                  onClick={() => scrollTo('#contact-form')} 
                                 >
                                 Contact
-                              </Link>
+                              </a>
                             </div>
                           </div>
                         </div>
