@@ -50,7 +50,7 @@ export default class Index extends Component {
                         <form action="/thank-you" method="post" netlify-honeypot="bot-field" data-netlify="true" name="general-contact" id="general-contact">
                             <div className="fields">
                                 <input type="hidden" name="bot-field" />
-                                <input type="hidden" name="form-name" value="contact" />
+                                <input type="hidden" name="form-name" value="general-contact" />
                                 <div className="field">
                                     <label className="label" htmlFor="name">Name: </label>
                                     <div className="control">
@@ -71,7 +71,8 @@ export default class Index extends Component {
                                             name="email" 
                                             id="email" 
                                             placeholder="bobross@gmail.com"
-                                            onChange={this.handleChange} />
+                                            onChange={this.handleChange} 
+                                        />
                                     </div>
                                 </div>
                                 <div className="field">

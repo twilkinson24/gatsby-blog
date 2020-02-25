@@ -28,12 +28,12 @@ const AboutMe = () => (
                                 </em>
                             </p>
                             <div className="cta-buttons">
-                                <a className="button button--inverted button--ujarak bg-dark-blue">
+                                <Link to="/work-together" className="button button--inverted button--ujarak bg-dark-blue">
                                     Hire Me
-                                </a>
-                                <a className="button blue-bg-trans button button--ujarak">
+                                </Link>
+                                <Link to="#contact-form" className="button blue-bg-trans button button--ujarak">
                                     Say What's Up
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

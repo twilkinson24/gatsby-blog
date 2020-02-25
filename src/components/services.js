@@ -48,14 +48,15 @@ const Services = () => (
                     <span style={{display: 'block', width: '170px' }}>A challenge!</span>
                   </li>
                 </ul>
-                <ul>
-                  <h3>Other plugins I've worked with include:</h3>
-                  <li>BuddyPress</li>
-                  <li>WooCommerce</li>
-                  <li>Elementor</li>
-                </ul>
               </div>
             </div>
+            <h3 class="has-text-centered" style={{marginBottom: '1rem'}}>Other plugins I've worked with include:</h3>
+            <ul class="flex other-plugins-list">
+              <li>Advanced Custom Fields</li>
+              <li>BuddyPress</li>
+              <li>WooCommerce</li>
+              <li>Elementor</li>
+            </ul>
             <p className="has-text-centered has-text-left-mobile"><a href="https://google.com">More about me and the web dev tools I use</a></p>
           </div>
         </div>

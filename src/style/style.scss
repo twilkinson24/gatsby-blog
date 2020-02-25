@@ -585,6 +585,10 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
       }
     }
   }
+  .other-plugins-list {
+    justify-content: space-evenly;
+    margin-bottom: 1rem;
+  }
 }
 
 .cta-buttons {
