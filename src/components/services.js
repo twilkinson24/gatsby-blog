@@ -1,4 +1,5 @@
-import React from "react";
+import React from "react"
+import { Link } from "gatsby"
 
 const Services = () => (
   <div className="services-wrap" id="services">
@@ -57,7 +58,8 @@ const Services = () => (
               <li>WooCommerce</li>
               <li>Elementor</li>
             </ul>
-            <p className="has-text-centered has-text-left-mobile"><a href="https://google.com">More about me and the web dev tools I use</a></p>
+            
+            <p className="has-text-centered"><Link to="#contact-form">Contact me</Link> if you'd like to know more about the tools I use.</p>
           </div>
         </div>
       </section>
