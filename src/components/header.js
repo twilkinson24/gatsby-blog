@@ -209,12 +209,12 @@ class Header extends Component {
                                 >
                                 Blog
                               </Link>
-                              <a
+                              <Link
                                   className="navbar-item"
                                   onClick={() => scrollTo('#contact-form')} 
                                 >
                                 Contact
-                              </a>
+                              </Link>
                             </div>
                           </div>
                         </div>
@@ -231,7 +231,7 @@ class Header extends Component {
                               <h2 className="title is-2 text-d-blue">I'm Taylor</h2>
                               <Typer heading={"I'm a"} dataText={["Web Developer","WordPress Developer", "Front-End Developer", "Freelancer"]} />
                               <div className="action-buttons cta-buttons">
-                                <a href="#about-me" className="button button--ujarak hover-trans bg-dark-blue">About</a>
+                                <Link onClick={() => scrollTo('#about-me')}  className="button button--ujarak hover-trans bg-dark-blue">About</Link>
                               </div>
                             </div>
                           </div>
