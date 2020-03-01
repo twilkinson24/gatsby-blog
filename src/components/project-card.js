@@ -24,16 +24,15 @@ class ProjectCard extends Component {
     <div
       className={`column project-card post-card`}
     >
-      <BackgroundImage src={this.state.imageSrc} onClick={() => this.setState({ isModalOpen: false})}/>
-      <div className="post-excerpt" onClick={() => this.setState({ isModalOpen: true})}>
-        <p className="title">
-          <span className="modal-link"
-              dangerouslySetInnerHTML={{ __html: this.state.projectData.title }}
-            />
-        </p>
-
-
-  
+      <div onClick={() => this.setState({ isModalOpen: true})}>
+        <BackgroundImage src={this.state.imageSrc} />
+        <div className="post-excerpt">
+          <p className="title">
+            <span className="modal-link"
+                dangerouslySetInnerHTML={{ __html: this.state.projectData.title }}
+              />
+          </p>
+        </div>
       </div>
       <div className={`modal ${this.state.isModalOpen ? 'is-active' : ''}`}>
           <div className="modal-background"></div>
@@ -49,9 +48,13 @@ class ProjectCard extends Component {
               <p dangerouslySetInnerHTML={{ __html: this.state.projectData.description }} />
             </section>
             <footer className="modal-card-foot">
-              <Link
-              to={this.state.projectData.github_link}>Github</Link>
-              <span> | </span>
+              {this.state.projectData.github_link.length > 0 ? 
+              <span>
+                <Link
+                to={this.state.projectData.github_link}>Github</Link>
+                <span> | </span>
+              </span>
+              : ''}
               <Link
               to={this.state.projectData.live_demo_url}>See it live</Link>
             </footer>

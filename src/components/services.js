@@ -51,8 +51,8 @@ const Services = () => (
                 </ul>
               </div>
             </div>
-            <h3 class="has-text-centered" style={{marginBottom: '1rem'}}>Other plugins I've worked with include:</h3>
-            <ul class="flex other-plugins-list">
+            <h3 className="has-text-centered" style={{marginBottom: '1rem'}}>Other plugins I've worked with include:</h3>
+            <ul className="flex other-plugins-list">
               <li>Advanced Custom Fields</li>
               <li>BuddyPress</li>
               <li>WooCommerce</li>
