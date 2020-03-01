@@ -98,6 +98,13 @@ article {
     }
   }
 }
+.modal.is-active {
+  .modal-card {
+    .modal-card-body {
+      cursor: default !important;
+    }
+  }
+}
 
 .projects-wrap {
   padding: 4rem 0;

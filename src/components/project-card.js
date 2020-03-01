@@ -45,6 +45,7 @@ class ProjectCard extends Component {
               <button className="delete" aria-label="close" onClick={() => this.setState({ isModalOpen: false})}></button>
             </header>
             <section className="modal-card-body">
+              <img src={this.state.imageSrc} alt="project screenshot" />
               <p dangerouslySetInnerHTML={{ __html: this.state.projectData.description }} />
             </section>
             <footer className="modal-card-foot">
@@ -56,7 +57,7 @@ class ProjectCard extends Component {
               </span>
               : ''}
               <a
-              to={this.state.projectData.live_demo_url}>See it live</a>
+              href={this.state.projectData.live_demo_url} target="_blank">See it live</a>
             </footer>
           </div>
         </div>
