@@ -50,13 +50,13 @@ class ProjectCard extends Component {
             <footer className="modal-card-foot">
               {this.state.projectData.github_link.length > 0 ? 
               <span>
-                <Link
-                to={this.state.projectData.github_link}>Github</Link>
+                <a
+                href={this.state.projectData.github_link}>Github</a>
                 <span> | </span>
               </span>
               : ''}
-              <Link
-              to={this.state.projectData.live_demo_url}>See it live</Link>
+              <a
+              to={this.state.projectData.live_demo_url}>See it live</a>
             </footer>
           </div>
         </div>
