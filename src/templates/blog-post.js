@@ -21,7 +21,7 @@ export default props => {
             {date} |{" "}
             {post.categories.map((c, index) => (
               <span key={index}>{c.name}</span>
-            ))}
+            ))}{" "}
           </span>
           <h1
             className="title is-size-2 has-text-weight-bold is-bold-light"
