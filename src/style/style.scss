@@ -77,8 +77,6 @@ article {
 }
 
 
-
-
 .blog-list {
   text-align: center;
   margin: auto;
@@ -417,7 +415,7 @@ h2.site-title {
     .navbar-item {
       color: $dark-blue;
       &:hover {
-        color: #ff3300;
+        color: #fff;
         transition: all 150ms ease-out;
       }
     }
@@ -438,6 +436,11 @@ h2.site-title {
       text-transform: uppercase;
       letter-spacing: 2px;
 
+      &:hover {
+        color: $orange;
+        transition: all 150ms ease-out;
+      }
+
       @media only screen and (max-width: 1023px) {
         color: $dark-blue;
       }
@@ -450,7 +453,7 @@ h2.site-title {
         color: $dark-blue;
 
         &:hover {
-          color: #ff3300;
+          color: $orange;
           transition: all 150ms ease-out;
         }
     }
@@ -459,7 +462,7 @@ h2.site-title {
     background-image: none;
     .navbar-menu {
       .navbar-item {
-        color: $dark-blue !important;
+        color: $dark-blue;
         &:hover {
           color: #ff3300;
           transition: all 150ms ease-out;
