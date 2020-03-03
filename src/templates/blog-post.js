@@ -20,8 +20,8 @@ export default props => {
           <span className="is-uppercase">
             {date} |{" "}
             {post.categories.map((c, index) => (
-              <span key={index}>{c.name}</span>
-            ))}{" "}
+              <span key={index}>{c.name}{" "}</span>
+            ))}
           </span>
           <h1
             className="title is-size-2 has-text-weight-bold is-bold-light"
