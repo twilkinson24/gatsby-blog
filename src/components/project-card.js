@@ -60,7 +60,7 @@ class ProjectCard extends Component {
               {this.state.projectData.live_demo_url.length > 0 ? 
                 <span>
                   <a
-                  href={this.state.projectData.live_demo_url}>See it Live</a>
+                  href={this.state.projectData.live_demo_url} target="_blank">See it Live</a>
                 </span>
               : 'Live demo not available for this project'}
             </footer>
