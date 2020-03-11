@@ -26,6 +26,7 @@ console.log(data)
             <section className="section">
                 <h3 className="title is-3 has-text-centered text-orange">Some Recent Projects</h3>
                 <p className="has-text-centered"><span className="bottom-line"></span></p>
+                <p className="has-text-centered">*New projects coming soon!*</p>
                 <p className="has-text-centered">
                   <Link to="#contact-form">Contact me</Link> with any questions, or if you'd like to see more samples of my work.
                 </p>
