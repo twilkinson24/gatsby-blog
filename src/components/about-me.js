@@ -22,7 +22,8 @@ const AboutMe = () => (
                                 people to build web sites and web applications.
                             </p>
                             <p>
-                                If you're interested, I invite you to learn more about the <Link to='/'>tools I use to build websites</Link> or the <Link to='/'>services I offer</Link>.
+                                If you're interested, I invite you to learn more about the <Link to='/blog/my-favorite-development-tools'>tools I use to build websites</Link> or the 
+                                 <a onClick={() => scrollTo('#services')}> services I offer</a>.
                             </p>
                             <p>
                                 <em>
