@@ -12,10 +12,7 @@ class ProjectCard extends Component {
       imageSrc: props.media,
       isModalOpen: false
  }
-   
-      console.log('image source')
-      console.log(this.state.imageSrc)
-  }
+}
 
   // This https://stackoverflow.com/questions/32553158/detect-click-outside-react-component
 
@@ -46,6 +43,8 @@ class ProjectCard extends Component {
             </header>
             <section className="modal-card-body">
               <img src={this.state.imageSrc} alt="project screenshot" />
+              { console.log(this.state.projectData.description)}
+              {console.log('project data')}
               <p dangerouslySetInnerHTML={{ __html: this.state.projectData.description }} />
             </section>
             <footer className="modal-card-foot">
