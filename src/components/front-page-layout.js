@@ -21,19 +21,9 @@ const FrontPageLayout = ({ children }) => (
     <Header />
       <main>
         <AboutMe />
-        <div className="white-bg">
-          <div className="container">
-            <section className="section">
-            <h3 className="title is-3 text-orange has-text-centered">Recent Blog Posts</h3>
-            <p className="has-text-centered"><span className="bottom-line"></span></p>
-              {children}
-            </section>
-          </div>
-        </div>
         <Services />
         <Projects />
         <Testimonial />
-        <ContactForm />
       </main>
     <Footer />
   </PageTransition>

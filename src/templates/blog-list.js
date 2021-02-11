@@ -53,18 +53,7 @@ console.log(data)
   return (
     <FrontPageLayout>
       <SEO title={siteTitle} keywords={[`gatsby`, `blog`, `wordpress`]} />
-      <div className="columns is-multiline is-mobile blog-list">
-        {posts.map((post, index) => (
-          <PostCard
-            key={post.node.wordpress_id}
-            title={post.node.title}
-            excerpt={'hide'}
-            media={post.node.featured_media}
-            slug={post.node.slug}
-            index={index}
-          />
-        ))}
-      </div>
+
     </FrontPageLayout>
   );
 };

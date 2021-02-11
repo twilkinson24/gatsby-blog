@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 const Services = () => (
-  <div className="services-wrap" id="services">
+  <div className="services-wrap bg-white" id="services">
     <div className="container">
       <section className="section services">
         <h3 className="title is-3 has-text-centered text-orange">What I Do</h3>
@@ -59,7 +59,7 @@ const Services = () => (
               <li>Elementor</li>
             </ul>
             
-            <p className="has-text-centered"><Link to="#contact-form">Contact me</Link> if you'd like to know more about the tools I use.</p>
+            <p className="has-text-centered"><a href="mailto:taylor@twilkinson.com">Contact me</a> if you'd like to know more about the tools I use.</p>
           </div>
         </div>
       </section>

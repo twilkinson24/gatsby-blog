@@ -6,8 +6,8 @@ import Typer from '../components/typer'
 
 import logo from "../images/logo-trans-bg.png"
 import logoSticky from "../images/logo-orange-trans-bg.png"
-import bubble from './../images/bubble2.png'
-import Particles from 'react-particles-js';
+// import bubble from './../images/bubble2.png'
+// import Particles from 'react-particles-js';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 
 class Header extends Component {
@@ -58,7 +58,7 @@ class Header extends Component {
           const wordpressMetadata = data.wordpressWpSettings;
           return (
               <section className="hero is-medium">
-                 <Particles 
+                 {/* <Particles 
                     width="100%"
                     height="90vh" 
                     params={{
@@ -164,7 +164,7 @@ class Header extends Component {
                       "width": "100%",
                       "height": "100%"
                     }}
-                  />
+                  /> */}
                   <div className="hero-wrapper">
                     <div className="hero-head">
                     <Sticky top={0} innerZ={9999} activeClass="is-fixed-top">
@@ -191,29 +191,18 @@ class Header extends Component {
                           </div>
                           <div id="navMenu" className="navbar-menu">
                             <div className="navbar-end has-text-centered">
-                              <a
-                                className="navbar-item"
-                                onClick={() => scrollTo('#services')} 
-                              >
-                                Services
-                              </a>
+                             
                               <a
                                   className="navbar-item"
                                   onClick={() => scrollTo('#about-me')} 
                                 >
                                 About
                               </a>
-                              <Link
-                                  className="navbar-item"
-                                  to={`/blog`}
-                                >
-                                Blog
-                              </Link>
                               <a
-                                  className="navbar-item"
-                                  onClick={() => scrollTo('#contact-form')} 
-                                >
-                                Contact
+                                className="navbar-item"
+                                onClick={() => scrollTo('#services')} 
+                              >
+                                What I do
                               </a>
                             </div>
                           </div>
@@ -227,7 +216,7 @@ class Header extends Component {
                         <section className="section">
                           <div className="columns">
                             <div className="column has-text-centered banner-content">
-                              <p className="lead text-white">Hey! Welcome to my mostly-finished portfolio site.</p>
+                              <p className="lead text-white">Hey! Welcome!</p>
                               <h2 className="title is-2 text-d-blue">I'm Taylor</h2>
                               <Typer heading={"I'm a"} dataText={["Web Developer","WordPress Developer", "Front-End Developer", "Freelancer"]} />
                               <div className="action-buttons cta-buttons">

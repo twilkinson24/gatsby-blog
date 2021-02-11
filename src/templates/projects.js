@@ -21,7 +21,7 @@ console.log('data')
 console.log(data)
 
   return (
-    <div className="white-bg">
+    <div>
           <div className="container">
             <section className="section">
                 <h3 className="title is-3 has-text-centered text-orange">Some Recent Projects</h3>
