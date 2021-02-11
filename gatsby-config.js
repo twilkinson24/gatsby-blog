@@ -140,25 +140,16 @@ module.exports = {
         ],
       },
     },
-
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          {
-            family: `Montserrat`,
-            variants: [`400`, `500`, `700`]
-          },
-          {
-            family: `Neuton`,
-            variants: [`400`, `700`]
-          },
-          {
-            family: `Open Sans`,
-            variants: [`400`, `500`, `700`]
-          },
+          `Montserrat\:400,500,700`,
+          `Neuton\:400,700`, // you can also specify font weights and styles
+          `Open Sans\:400,500,700` // you can also specify font weights and styles
         ],
-      },
+        display: 'swap'
+      }
     },
     'gatsby-plugin-page-transitions',
     `gatsby-plugin-scroll-reveal`,
