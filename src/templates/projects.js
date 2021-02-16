@@ -13,12 +13,7 @@ import ProjectCard from "../components/project-card";
 
 const Projects = props => {
   const { data } = props;
-//const siteTitle = data.site.siteMetadata.title;
-//  const { currentPage, numPages } = props.pageContext;
-//const projects = data.allWordpressProjects.edges;
 
-console.log('data')
-console.log(data)
 
   return (
     <div>
@@ -27,12 +22,7 @@ console.log(data)
                 <h3 className="title is-3 has-text-centered text-orange">Some Recent Projects</h3>
                 <p className="has-text-centered"><span className="bottom-line"></span></p>
                 <p className="has-text-centered">*New projects coming soon!*</p>
-                <p className="has-text-centered">
-                  <Link to="#contact-form">Contact me</Link> with any questions, or if you'd like to see more samples of my work.
-                </p>
-                <p className="has-text-centered">
-                  Interested in working together? <Link to="/work-together">Let me know!</Link>
-                </p>
+
                 <div className="projects-wrap">
                   <div className="columns is-multiline is-mobile blog-list">
                     <StaticQuery query={graphql`{

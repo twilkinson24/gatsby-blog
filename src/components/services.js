@@ -23,10 +23,10 @@ const Services = () => (
                 <p><strong>Recent projects have involved:</strong></p>
                 <ul className="list-style-circle">
                   <li>PSD to WordPress</li>
+                  <li>LearnDash</li>
                   <li>Headless WordPress With Gatsby.js</li>
                   <li>WordPress Edits and Redesigns</li>
                   <li>WooCommerce implementation</li>
-                  <li>Landing Pages</li>
                 </ul>
               </div>
               <div className="column is-6 is-mobile projects-n-favorites">
@@ -34,7 +34,7 @@ const Services = () => (
                 <ul className="list-style-none">
                   <li className="flex">
                     <span className="favorite-label"><em>Theme:</em></span>
-                    <span style={{ display: 'block' }}>Genesis by StudioPress</span>
+                    <span style={{ display: 'block' }}>Astra or UnderStrap</span>
                   </li>
                   <li className="flex">
                     <span className="favorite-label"><em>Page Builder:</em></span>
@@ -54,11 +54,11 @@ const Services = () => (
             <h3 className="has-text-centered" style={{marginBottom: '1rem'}}>Other plugins I've worked with include:</h3>
             <ul className="flex other-plugins-list">
               <li>Advanced Custom Fields</li>
-              <li>BuddyPress</li>
+              <li>MemberPress</li>
+              <li>FacetWP</li>
               <li>WooCommerce</li>
               <li>Elementor</li>
-            </ul>
-            
+            </ul>            
             <p className="has-text-centered"><a href="mailto:taylor@twilkinson.com">Contact me</a> if you'd like to know more about the tools I use.</p>
           </div>
         </div>
