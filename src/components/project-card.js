@@ -43,8 +43,7 @@ class ProjectCard extends Component {
             </header>
             <section className="modal-card-body">
               <img src={this.state.imageSrc} alt="project screenshot" />
-              { console.log(this.state.projectData)}
-              {console.log('project data')}
+
               <div dangerouslySetInnerHTML={{ __html: this.state.projectData.description }} />
             </section>
             <footer className="modal-card-foot">
