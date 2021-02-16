@@ -11,12 +11,17 @@ import scrollTo from 'gatsby-plugin-smoothscroll';
 
 
 
+import SEO from './seo';
+
+
+
 import Footer from "./footer"
 import "../style/style.scss"
 
 
 const FrontPageLayout = ({ children }) => (
   <PageTransition>
+    <SEO />
     <Header />
       <main>
         <AboutMe />
