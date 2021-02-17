@@ -11,8 +11,22 @@ class ProjectCard extends Component {
       projectData: props,
       imageSrc: props.media,
       isModalOpen: false
- }
-}
+    }
+  }
+
+  // escFunction(event){
+  //   if(event.keyCode === 27) {
+  //     console.log('hi')
+  //     //Do whatever when esc is pressed
+  //     if(this.state.isModalOpen) {
+  //       this.setState({
+  //         isModalOpen: false
+  //       })
+  //     }
+  //   }
+  // }
+ 
+  
 
   // This https://stackoverflow.com/questions/32553158/detect-click-outside-react-component
 
@@ -21,8 +35,8 @@ class ProjectCard extends Component {
     <div
       className={`column project-card post-card`}
     >
-      <div onClick={() => this.setState({ isModalOpen: true})}>
-        <BackgroundImage src={this.state.imageSrc} />
+      <div onClick={() => this.setState({ isModalOpen: true})} >
+        <BackgroundImage src={this.state.imageSrc}/>
         <div className="post-excerpt">
           <p className="title">
             <span className="modal-link"
